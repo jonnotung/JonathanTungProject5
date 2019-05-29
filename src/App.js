@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component, Fragment} from 'react';
 import './App.css';
+import dummyTestData from './dummyTestData.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Main app class 
+class App extends Component {
+  // stores data about a single student in state
+  constructor() {
+    super();
+    this.state = {
+      students: []
+    }
+  }
+
+  //load data from dummy data
+  componentDidMount() {
+
+    const tempArray = [];
+
+    for (let key in dummyTestData) {
+      const tempStudent = {
+        name: key,
+        classes: dummyTestData[key]
+      }
+
+      tempArray.push(tempStudent);
+    }
+
+    console.log(tempArray);
+    this.setState({
+      students: tempArray
+    })
+  }
+
+  render() {
+    
+    return (
+      <div className="App">
+        { this.state.students.map( (student)=>{
+          return(<Fragment>
+            <h2>{student.name}</h2>
+            { student.classes.map( (clas) => {
+              return(
+                <p>{clas}</p>
+              );
+            } ) }
+          </Fragment>)
+        })}
+      </div>
+    );
+
+  }
 }
+
+
 
 export default App;
