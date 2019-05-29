@@ -8,44 +8,49 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      students: []
-    }
+      currentStudent: {
+        name: ``,
+        enrolled: []
+      },
+      currentClass: ''
+    };
+
+    this.handleEnroll = this.handleEnroll.bind(this);
   }
 
   //load data from dummy data
   componentDidMount() {
+  }
 
-    const tempArray = [];
-
-    for (let key in dummyTestData) {
-      const tempStudent = {
-        name: key,
-        classes: dummyTestData[key]
-      }
-
-      tempArray.push(tempStudent);
-    }
-
-    console.log(tempArray);
+  handleEnrollChange = (event) => {
+    console.log(this.refs.enroll.value);
+    const newName = this.refs.enroll.value;
     this.setState({
-      students: tempArray
+      currentClass: newName
+    })
+  }
+
+  handleEnroll = (event) => {
+    event.preventDefault();
+    const enrolledCopy = [...this.state.currentStudent.enrolled];
+    enrolledCopy.push(this.state.currentClass)
+    console.log(enrolledCopy);
+    this.setState({
+      currentStudent: {
+        enrolled: enrolledCopy
+      },
+      currentClass: ``
     })
   }
 
   render() {
-    
     return (
       <div className="App">
-        { this.state.students.map( (student)=>{
-          return(<Fragment>
-            <h2>{student.name}</h2>
-            { student.classes.map( (clas) => {
-              return(
-                <p>{clas}</p>
-              );
-            } ) }
-          </Fragment>)
-        })}
+        <form onSubmit={  this.handleEnroll }>
+          <label htmlFor="enroll">Enroll student in a class</label>
+          <input type="text" name="enroll" id="enroll" ref="enroll" placeholder="Enter class to enroll" onChange={this.handleEnrollChange} />
+          <button >Enroll</button>
+        </form>
       </div>
     );
 
