@@ -1,0 +1,45 @@
+//-------------------------------
+//---------intro section---------
+//-------------------------------
+
+h1{
+    text-align: center;
+    text-shadow:2px 1px $elementMain,
+        4px 2px $elementMain,
+        6px 4px $elementMain;
+}
+
+h3 {
+    margin-top: 2.5vh;
+}
+
+form {
+    margin-top: 5vh;
+}
+
+.enrollButton {
+    margin-top: 2vh;
+    font-size: 1.75rem;
+}
+
+.enrolledList {
+    margin: 2.5vh auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.enrolledItems {
+    width: 31%;
+    margin: 0 calc(7% / 6) 1vh calc( 7% / 6 );
+    padding: 8px 0;
+    text-align: center;
+    background: $elementMain;
+    border-radius: 10px;
+}
+
+.createButton {
+    margin: 5vh auto 5vh auto;
+    font-size: 2.5rem;
+    padding: 25px 20px; 
+    border-radius: 25px;
+}
