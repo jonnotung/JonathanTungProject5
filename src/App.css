@@ -197,6 +197,11 @@ h4 {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #182D40;
+}
+
 /* ------------------------------
 -------typography---
 ------------------------------ */
@@ -211,13 +216,13 @@ label {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h1 {
   color: #182D40;
   font-family: "Rajdhani", sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 h2,
@@ -229,20 +234,24 @@ button {
 }
 
 label {
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   text-shadow: 2px 1px #F1FFFA;
 }
 
 input {
-  font-size: 1.5rem;
-}
-
-li {
   font-size: 1rem;
 }
 
+input:focus {
+  outline: 3px solid #F1FFFA;
+}
+
+li {
+  font-size: 0.75rem;
+}
+
 i {
-  font-size: 1.25rem;
+  font-size: 0.65rem;
 }
 
 input,
@@ -274,7 +283,12 @@ body {
 button {
   background: #FFC602;
   padding: 10px 15px;
+  border: 3px solid #F1FFFA;
   border-radius: 10px;
+}
+
+button:focus {
+  outline: 3px solid #F1FFFA;
 }
 
 h1 {
@@ -297,6 +311,7 @@ form {
 
 .enrolledList {
   margin: 2.5vh auto 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,12 +319,19 @@ form {
       flex-wrap: wrap;
 }
 
-.enrolledItems {
-  width: 31%;
-  margin: 0 calc(7% / 6) 1vh calc( 7% / 6);
-  padding: 8px 0;
+.enrolledLI {
+  display: block;
+  padding: 0;
+  width: 30%;
+  margin: 0 1% 2vh 1%;
+}
+
+button.enrolledButton {
+  width: 100%;
+  padding: 5px 0;
   text-align: center;
   background: #F1FFFA;
+  border: 1px solid #182D40;
   border-radius: 10px;
 }
 

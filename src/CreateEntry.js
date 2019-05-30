@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Header from './Header.js';
 import CreateName from './CreateName.js';
 import Enroll from './Enroll.js';
+import EnrolledList from './EnrolledList';
 import firebase from './firebase.js';
 
 // ------------------------------------------------------------------
@@ -103,7 +104,8 @@ class CreateEntry extends Component {
             <Fragment>
                 <div className="innerWrapper create">
                     <Header />
-                    <section className="createForms" >
+                    {/* put handeSubmit on parent element of forms to prevent default behaviour for both when sumbitted */}
+                    <section className="createForms" onSubmit={this.handleSubmit}>
                         <CreateName
                             changes={this.handleChange.bind(this)}
                             values={this.state.name}
@@ -116,15 +118,13 @@ class CreateEntry extends Component {
                         />
                        
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
-                        <h3>Enrolled Classes:</h3>
-                        <ul className="enrolledList">
-                            {this.state.enrolled.map((currentClass, i) => {
-                                return (
-                                    <li key={i} index={i} onClick={() => this.handleDeleteEnroll(i)} className="enrolledItems">{currentClass} <i className="far fa-times-circle"></i></li>
-                                );
-                            })}
-                        </ul>
-                        {/* submit button outside to prevent user hitting enter on name field and activating enroll function */}
+                        
+                        <EnrolledList 
+                            enrolled={this.state.enrolled}
+                            handleDelete={this.handleDeleteEnroll.bind(this)}
+                            anythingEnrolled={this.state.enrolled.length > 0}
+                        />
+                        
                         <button className="createButton" onClick={this.handleCreate.bind(this)}>Create Entry</button>
                     </section>
                 </div>

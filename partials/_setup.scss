@@ -26,6 +26,11 @@ h4 {
     padding: 0;
 } 
 
+a {
+    text-decoration: none;
+    color: $text;
+}
+
 /* ------------------------------
 -------typography---
 ------------------------------ */
@@ -40,13 +45,13 @@ label {
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 h1 {
     color: $text;
     font-family: $headers;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 h2,
@@ -59,20 +64,24 @@ button {
 
 label {
     
-    font-size: 1.85rem;
+    font-size: 1.5rem;
     text-shadow:2px 1px $elementMain;
 }
 
 input {
-    font-size: 1.5rem;
-}
-
-li {
     font-size: 1rem;
 }
 
+input:focus {
+    outline: $focusOutline;
+}
+
+li {
+    font-size: 0.75rem;
+}
+
 i {
-    font-size: 1.25rem;
+    font-size: 0.65rem;
 }
 
 //-------------------------------
@@ -107,5 +116,10 @@ body {
 button {
     background: $accentSharp;
     padding: 10px 15px;
+    border: 3px solid $elementMain;
     border-radius: 10px;
+}
+
+button:focus {
+    outline: $focusOutline;
 }
