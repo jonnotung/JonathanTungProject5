@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import InputFeedback from './InputFeedback.js';
 
 const CreateName = (props) => {
     
@@ -14,6 +15,10 @@ const CreateName = (props) => {
                     placeholder="Enter student name"
                     value={props.values}
                     onChange={props.changes}
+                />
+                <InputFeedback
+                    inputID={props.inputErrorID}
+                    nameError={props.nameError} 
                 />
             </form>
         );

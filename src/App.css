@@ -235,7 +235,7 @@ button {
 
 label {
   font-size: 1.5rem;
-  text-shadow: 2px 1px #F1FFFA;
+  text-shadow: 1px 1px #F1FFFA;
 }
 
 input {
@@ -247,7 +247,7 @@ input:focus {
 }
 
 li {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 i {
@@ -291,6 +291,19 @@ button:focus {
   outline: 3px solid #F1FFFA;
 }
 
+.inputWarning {
+  background: #38AECC;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #F1FFFA;
+  margin-top: 5px;
+}
+
+.inputWarning p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
 h1 {
   text-align: center;
   text-shadow: 2px 1px #F1FFFA, 4px 2px #F1FFFA, 6px 4px #F1FFFA;
@@ -326,7 +339,7 @@ form {
   margin: 0 1% 2vh 1%;
 }
 
-button.enrolledButton {
+button.enrolledListButton {
   width: 100%;
   padding: 5px 0;
   text-align: center;
@@ -337,7 +350,7 @@ button.enrolledButton {
 
 .createButton {
   margin: 5vh auto 5vh auto;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 25px 20px;
   border-radius: 25px;
 }

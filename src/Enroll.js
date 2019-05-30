@@ -1,4 +1,5 @@
 import React from 'react';
+import InputFeedback from './InputFeedback.js';
 
 const Enroll = (props) => {
     return(
@@ -13,6 +14,10 @@ const Enroll = (props) => {
                 placeholder="Enter class to enroll"
                 value={props.values}
                 onChange={props.changes}
+            />
+            <InputFeedback
+                inputID={props.inputErrorID}
+                enrollError={props.enrollError}
             />
         
     </form>

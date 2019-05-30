@@ -17,6 +17,7 @@ form {
     margin-top: 5vh;
 }
 
+//button you click to enroll a class
 .enrollButton {
     margin-top: 2vh;
     font-size: 1.75rem;
@@ -38,7 +39,8 @@ form {
 }
 
 //increase specificity to overwrite other button styles
-button.enrolledButton {
+//dynamic enrolled list items you can click to delete
+button.enrolledListButton {
     width: 100%;
     padding: 5px 0;
     text-align: center;
@@ -49,7 +51,7 @@ button.enrolledButton {
 
 .createButton {
     margin: 5vh auto 5vh auto;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 25px 20px; 
     border-radius: 25px;
 }

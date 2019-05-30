@@ -3,6 +3,7 @@ import Header from './Header.js';
 import CreateName from './CreateName.js';
 import Enroll from './Enroll.js';
 import EnrolledList from './EnrolledList';
+// import InputFeedback from './InputFeedback.js';
 import firebase from './firebase.js';
 
 // ------------------------------------------------------------------
@@ -16,9 +17,11 @@ class CreateEntry extends Component {
         this.state = {
             name: ``,
             enrolled: [],
-            currentClass: ''
+            currentClass: '',
+            inputErrorID: -1,
+            nameError: false,
+            enrollError: false
         };
-
         //bind event handlers 'this' to this component, so they can be passed as props
         // this.handleChange = this.handleChange.bind(this);
         // this.handleSubmit = this.handleSubmit.bind(this);
@@ -57,12 +60,15 @@ class CreateEntry extends Component {
             this.setState({
                 enrolled: enrolledCopy,
                 //reset currently input class
-                currentClass: ``
+                currentClass: ``,
+                inputErrorID: -1,
+                enrollError: false
             })
         } else {
-            //otherwise show an error message to the user and entered class name in state
+            //otherwise update state to refresh to show a message to the user about proper input format
             this.setState({
-                currentClass: ``
+                inputErrorID: 1,
+                enrollError: true
             });
         }
     }
@@ -81,7 +87,15 @@ class CreateEntry extends Component {
             this.setState({
                 name: ``,
                 enrolled: [],
-                currentClass: ''
+                currentClass: '',
+                inputErrorID: -1,
+                nameError: false
+            });
+        } else {
+            //otherwise update state to refresh to show a message to the user to enter a proper name 
+            this.setState({
+                inputErrorID: 0,
+                nameError: true
             });
         }
     }
@@ -110,11 +124,15 @@ class CreateEntry extends Component {
                             changes={this.handleChange.bind(this)}
                             values={this.state.name}
                             submitting={this.handleSubmit.bind(this)}
+                            inputErrorID={this.state.inputErrorID}
+                            nameError={this.state.nameError}
                         />
                         <Enroll 
                             changes={this.handleChange.bind(this)}
                             values={this.state.currentClass}
                             submitting={this.handleSubmit.bind(this)}
+                            inputErrorID={this.state.inputErrorID}
+                            enrollError={this.state.enrollError}
                         />
                        
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
@@ -123,6 +141,7 @@ class CreateEntry extends Component {
                             enrolled={this.state.enrolled}
                             handleDelete={this.handleDeleteEnroll.bind(this)}
                             anythingEnrolled={this.state.enrolled.length > 0}
+                            numEnrolled={this.state.enrolled.length}
                         />
                         
                         <button className="createButton" onClick={this.handleCreate.bind(this)}>Create Entry</button>
