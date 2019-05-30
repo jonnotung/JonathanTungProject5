@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import Header from './Header.js';
+import CreateName from './CreateName.js';
+import Enroll from './Enroll.js';
 import firebase from './firebase.js';
 
 // ------------------------------------------------------------------
@@ -15,6 +17,13 @@ class CreateEntry extends Component {
             enrolled: [],
             currentClass: ''
         };
+
+        //bind event handlers 'this' to this component, so they can be passed as props
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleCreate = this.handleCreate.bind(this);
+        // this.handleEnroll = this.handleEnroll.bind(this);
+        // this.handleDeleteEnroll =this.handleDeleteEnroll.bind(this);
     }
 
     //remove default behaviour
@@ -23,7 +32,6 @@ class CreateEntry extends Component {
     }
 
     handleChange = (event) => {
-
         //captures input in input fields to state immediately
         this.setState({
             [event.target.name]: event.target.value
@@ -94,47 +102,29 @@ class CreateEntry extends Component {
             <Fragment>
                 <div className="innerWrapper create">
                     <Header />
-                    <section className="createForms">
-                        <form className="nameCreate" onSubmit={this.handleSubmit}>
-                            <label htmlFor="name">
-                                <h4>Enter student name:</h4>
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                ref="name"
-                                placeholder="Enter student name"
-                                onChange={this.handleChange}
-                                value={this.state.name}
-                            />
-                        </form>
-                        <form className="enrollCreate" onSubmit={this.handleSubmit}>
-                            <label htmlFor="enroll">
-                                <h4>Add a class to enroll:</h4>
-                            </label>
-                            <input
-                                type="text"
-                                name="currentClass"
-                                id="enroll"
-                                ref="enroll"
-                                placeholder="Enter class to enroll"
-                                onChange={this.handleChange}
-                                value={this.state.currentClass}
-                            />
-                            {/* put button in form so  user can hit enter to add a class to enrolled list */}
-                            <button className="enrollButton" onClick={this.handleEnroll}>Enroll</button>
-                        </form>
+                    <section className="createForms" >
+                        <CreateName
+                            changes={this.handleChange.bind(this)}
+                            values={this.state.name}
+                            submitting={this.handleSubmit.bind(this)}
+                        />
+                        <Enroll 
+                            changes={this.handleChange.bind(this)}
+                            values={this.state.currentClass}
+                            submitting={this.handleSubmit.bind(this)}
+                        />
+                       
+                        <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
                         <h3>Enrolled Classes:</h3>
                         <ul className="enrolledList">
                             {this.state.enrolled.map((currentClass, i) => {
                                 return (
-                                    <li key={i} index={i} onClick={() => this.handleDeleteEnroll(i)} className="enrolledItems">{currentClass} <i class="far fa-times-circle"></i></li>
+                                    <li key={i} index={i} onClick={() => this.handleDeleteEnroll(i)} className="enrolledItems">{currentClass} <i className="far fa-times-circle"></i></li>
                                 );
                             })}
                         </ul>
                         {/* submit button outside to prevent user hitting enter on name field and activating enroll function */}
-                        <button className="createButton" onClick={this.handleCreate}>Create Entry</button>
+                        <button className="createButton" onClick={this.handleCreate.bind(this)}>Create Entry</button>
                     </section>
                 </div>
             </Fragment>
