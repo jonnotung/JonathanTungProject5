@@ -392,11 +392,11 @@ button.enrolledListButton {
   color: #182D40;
   border-radius: 5px 5px 0 0;
   font-family: "Signika", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .react-tabs__tab {
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .react-tabs__tab-list {

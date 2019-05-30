@@ -1,4 +1,5 @@
-import React, {Component, Fragment} from 'react';
+import React, {Fragment} from 'react';
+import CreateSharedElements from './CreateSharedElements.js'
 import Header from './Header.js';
 import CreateName from './CreateName.js';
 import Enroll from './Enroll.js';
@@ -9,7 +10,7 @@ import firebase from './firebase.js';
 // ---separate create and update forms to have different state-------
 // ------------------------------------------------------------------
 
-class CreateEntry extends Component {
+class CreateEntry extends CreateSharedElements {
     // stores data about a single student in state
     constructor() {
         super();
@@ -21,49 +22,6 @@ class CreateEntry extends Component {
             nameError: false,
             enrollError: false
         };
-    }
-
-    //remove default behaviour
-    handleSubmit = (event) => {
-        event.preventDefault();
-    }
-
-    handleChange = (event) => {
-        //captures input in input fields to state immediately
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-
-    handleEnroll = (event) => {
-        event.preventDefault();
-
-        //get a copy of enrolled classes for current student to work on
-        const enrolledCopy = [...this.state.enrolled];
-
-        //regex to check if input is in accepted form - 3 letters 3 numbers
-        const pattern = /^([a-z]|[A-Z]){3}[0-9]{3}$/;
-
-        //only save if something has been entered in the correct format, 
-        //and there's less than 6 classes currently entered
-        if (pattern.exec(this.state.currentClass) && this.state.enrolled.length < 6) {
-            enrolledCopy.push(this.state.currentClass);
-
-            //update state with newly enrolled class
-            this.setState({
-                enrolled: enrolledCopy,
-                //reset currently input class
-                currentClass: ``,
-                inputErrorID: -1,
-                enrollError: false
-            })
-        } else  {
-            //otherwise update state to refresh to show a message to the user about proper input format
-            this.setState({
-                inputErrorID: 1,
-                enrollError: true
-            });
-        } 
     }
 
     handleCreate = (event) => {
@@ -91,18 +49,6 @@ class CreateEntry extends Component {
                 nameError: true
             });
         }
-    }
-
-    handleDeleteEnroll = (index) => {
-        //filter out <li> we clicked on
-        //save this as a new array
-        const newState = this.state.enrolled.filter((currentClass, i) => {
-            return i !== index;
-        });
-        //set new state
-        this.setState({
-            enrolled: newState
-        });
     }
 
     render() {

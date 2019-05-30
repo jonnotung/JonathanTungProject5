@@ -4,7 +4,7 @@ import InputFeedback from './InputFeedback.js';
 const EnrolledList = (props) => {
     return(
         <Fragment>
-            {props.anythingEnrolled ? <h3>Enrolled Classes:</h3> : <h3></h3> }
+            {props.anythingEnrolled ? <h3>Enrolled Classes:</h3> : <Fragment></Fragment> }
             <InputFeedback
                 numEnrolled={props.numEnrolled}
             />

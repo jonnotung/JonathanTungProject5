@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
 import CreateEntry from './CreateEntry.js';
@@ -13,8 +13,8 @@ class App extends Component {
       <div className="App outerWrapper">
         <Tabs>
           <TabList>
-            <Tab>Create an Entry</Tab>
-            <Tab>Update an Entry</Tab>
+            <Tab>Create</Tab>
+            <Tab>Update</Tab>
           </TabList>
 
           <TabPanel>

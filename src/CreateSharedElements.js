@@ -1,20 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import firebase from './firebase.js';
+import { Component } from 'react';
 
 class CreateSharedElements extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-            name: ``,
-            enrolled: [],
-            currentClass: '',
-            enrollError: false,
-            nameError: false,
-            inputErrorID: -1,
-            currentStudent: {}
-        }
-    }
 
     //Enters a class to state
     handleEnroll = (event) => {
