@@ -225,12 +225,19 @@ h1 {
   font-size: 4rem;
 }
 
-h2,
 h3,
 h4,
 button {
   color: #182D40;
   font-family: "Signika", sans-serif;
+}
+
+h2 {
+  color: #182D40;
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 2px 1px #F1FFFA, 4px 2px #F1FFFA;
 }
 
 label {
@@ -240,6 +247,7 @@ label {
 
 input {
   font-size: 1rem;
+  width: 100%;
 }
 
 input:focus {
@@ -353,5 +361,45 @@ button.enrolledListButton {
   font-size: 2rem;
   padding: 25px 20px;
   border-radius: 25px;
+}
+
+.searchButton {
+  margin: 2vh 0;
+  font-size: 1.75rem;
+}
+
+.enrollCreate {
+  margin-top: 2vh;
+}
+
+.update h3 {
+  margin-top: 7.5vh;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 2px 2px #F1FFFA;
+}
+
+.updateButton {
+  margin: 5vh auto 5vh auto;
+  font-size: 2rem;
+  padding: 25px 20px;
+  border-radius: 25px;
+}
+
+.react-tabs__tab--selected.react-tabs__tab {
+  background: #73C1C6;
+  border-color: #F1FFFA;
+  color: #182D40;
+  border-radius: 5px 5px 0 0;
+  font-family: "Signika", sans-serif;
+  font-size: 1.25rem;
+}
+
+.react-tabs__tab {
+  font-size: 1rem;
+}
+
+.react-tabs__tab-list {
+  background: #F1FFFA;
 }
 /*# sourceMappingURL=App.css.map */

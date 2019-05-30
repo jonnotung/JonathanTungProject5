@@ -3,7 +3,6 @@ import Header from './Header.js';
 import CreateName from './CreateName.js';
 import Enroll from './Enroll.js';
 import EnrolledList from './EnrolledList';
-// import InputFeedback from './InputFeedback.js';
 import firebase from './firebase.js';
 
 // ------------------------------------------------------------------
@@ -22,12 +21,6 @@ class CreateEntry extends Component {
             nameError: false,
             enrollError: false
         };
-        //bind event handlers 'this' to this component, so they can be passed as props
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleCreate = this.handleCreate.bind(this);
-        // this.handleEnroll = this.handleEnroll.bind(this);
-        // this.handleDeleteEnroll =this.handleDeleteEnroll.bind(this);
     }
 
     //remove default behaviour
@@ -64,13 +57,13 @@ class CreateEntry extends Component {
                 inputErrorID: -1,
                 enrollError: false
             })
-        } else {
+        } else  {
             //otherwise update state to refresh to show a message to the user about proper input format
             this.setState({
                 inputErrorID: 1,
                 enrollError: true
             });
-        }
+        } 
     }
 
     handleCreate = (event) => {
@@ -123,14 +116,12 @@ class CreateEntry extends Component {
                         <CreateName
                             changes={this.handleChange.bind(this)}
                             values={this.state.name}
-                            submitting={this.handleSubmit.bind(this)}
                             inputErrorID={this.state.inputErrorID}
                             nameError={this.state.nameError}
                         />
                         <Enroll 
                             changes={this.handleChange.bind(this)}
                             values={this.state.currentClass}
-                            submitting={this.handleSubmit.bind(this)}
                             inputErrorID={this.state.inputErrorID}
                             enrollError={this.state.enrollError}
                         />

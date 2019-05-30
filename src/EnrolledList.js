@@ -10,13 +10,12 @@ const EnrolledList = (props) => {
             />
             <ul className="enrolledList">
                 { props.enrolled.map((currentClass, i) => {
-                        return (
-                            <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
-                                <button className="enrolledListButton">
-                                    {currentClass} <i className="far fa-times-circle"></i>
-                                </button>
-                            </li>
-                        );
+                    return (
+                        <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
+                            <button className="enrolledListButton">
+                                {currentClass} <i className="far fa-times-circle"></i>
+                            </button>
+                        </li>);
                     } )
                 }
             </ul>

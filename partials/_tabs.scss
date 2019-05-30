@@ -1,0 +1,22 @@
+//-------------------------
+//--------tab styles-------
+//-------------------------
+
+
+.react-tabs__tab--selected.react-tabs__tab {
+    background: $background;
+    border-color: $elementMain;
+    color: $text;
+    border-radius: 5px 5px 0 0;
+    font-family: $subheaders;
+    font-size: 1.25rem;
+}
+
+.react-tabs__tab {
+    
+    font-size: 1rem;
+}
+
+.react-tabs__tab-list {
+    background: $elementMain;
+}
