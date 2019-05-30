@@ -98,6 +98,7 @@ class CreateEntry extends Component {
     }
 
     render() {
+        // binding event handlers to this component to get form fields resetting on submit
         return(
             <Fragment>
                 <div className="innerWrapper create">
