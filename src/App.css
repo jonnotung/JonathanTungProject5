@@ -312,6 +312,28 @@ button:focus {
   line-height: 1.5rem;
 }
 
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  -webkit-transition: opacity 900ms ease;
+  transition: opacity 900ms ease;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 900ms ease;
+  transition: opacity 900ms ease;
+}
+
 h1 {
   text-align: center;
   text-shadow: 2px 1px #F1FFFA, 4px 2px #F1FFFA, 6px 4px #F1FFFA;

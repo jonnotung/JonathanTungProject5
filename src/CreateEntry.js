@@ -5,6 +5,7 @@ import CreateName from './CreateName.js';
 import Enroll from './Enroll.js';
 import EnrolledList from './EnrolledList';
 import firebase from './firebase.js';
+import { CSSTransition } from 'react-transition-group';
 
 // ------------------------------------------------------------------
 // ---separate create and update forms to have different state-------
@@ -73,13 +74,19 @@ class CreateEntry extends CreateSharedElements {
                         />
                        
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
-                        
-                        <EnrolledList 
-                            enrolled={this.state.enrolled}
-                            handleDelete={this.handleDeleteEnroll.bind(this)}
-                            anythingEnrolled={this.state.enrolled.length > 0}
-                            numEnrolled={this.state.enrolled.length}
-                        />
+                        <CSSTransition 
+                            in={this.state.enrolled.length > 0}
+                            appear={true}
+                            timeout={300}
+                            classNames="fade"
+                        >
+                            <EnrolledList 
+                                enrolled={this.state.enrolled}
+                                handleDelete={this.handleDeleteEnroll.bind(this)}
+                                anythingEnrolled={this.state.enrolled.length > 0}
+                                numEnrolled={this.state.enrolled.length}
+                            />
+                        </CSSTransition>
                         
                         <button className="createButton" onClick={this.handleCreate.bind(this)}>Create Entry</button>
                     </section>

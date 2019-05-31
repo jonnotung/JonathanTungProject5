@@ -146,3 +146,26 @@ button:focus {
     font-size: 1.2rem;
     line-height: 1.5rem;
 }
+
+//----------------------------
+//-----react transitions------ 
+//----------------------------
+.fade-appear {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 900ms ease;
+}
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 900ms ease;
+}

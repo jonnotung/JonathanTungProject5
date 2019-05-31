@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { CSSTransition } from 'react-transition-group';
 import "react-tabs/style/react-tabs.css";
 import CreateEntry from './CreateEntry.js';
 import UpdateEntry from './UpdateEntry.js';
@@ -17,12 +18,28 @@ class App extends Component {
             <Tab>Update</Tab>
           </TabList>
 
-          <TabPanel>
-            <CreateEntry />
-          </TabPanel>
+          
+            <TabPanel>
+              <CSSTransition 
+                in={true}
+                appear={true}
+                timeout={900}
+                classNames="fade"
+              >
+                <CreateEntry />
+              </CSSTransition>
+            </TabPanel>
+          
           
           <TabPanel>
-            <UpdateEntry />
+            <CSSTransition 
+              in={true}
+              appear={true}
+              timeout={900}
+              classNames="fade"
+            >
+              <UpdateEntry />
+            </CSSTransition>
           </TabPanel>
           
         </Tabs>
