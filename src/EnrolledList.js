@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import {CSSTransition} from 'react-transition-group';
 import InputFeedback from './InputFeedback.js';
 
 const EnrolledList = (props) => {
@@ -11,11 +12,19 @@ const EnrolledList = (props) => {
             <ul className="enrolledList">
                 { props.enrolled.map((currentClass, i) => {
                     return (
-                        <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
-                            <button className="enrolledListButton">
-                                {currentClass} <i className="far fa-times-circle"></i>
-                            </button>
-                        </li>);
+                        <CSSTransition
+                            in={true}
+                            appear={true}
+                            timeout={300}
+                            classNames="fade"
+                        >
+                            <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
+                                <button className="enrolledListButton">
+                                    {currentClass} <i className="far fa-times-circle"></i>
+                                </button>
+                            </li>
+                        </CSSTransition>);
+                        
                     } )
                 }
             </ul>

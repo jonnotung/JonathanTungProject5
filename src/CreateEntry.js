@@ -43,8 +43,13 @@ class CreateEntry extends CreateSharedElements {
                 inputErrorID: -1,
                 nameError: false
             });
-        } else {
+        } else if (this.state.name) {
             //otherwise update state to refresh to show a message to the user to enter a proper name 
+            this.setState({
+                inputErrorID: -1,
+                nameError: false
+            });
+        } else {
             this.setState({
                 inputErrorID: 0,
                 nameError: true
@@ -74,6 +79,7 @@ class CreateEntry extends CreateSharedElements {
                         />
                        
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
+
                         <CSSTransition 
                             in={this.state.enrolled.length > 0}
                             appear={true}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition} from 'react-transition-group';
 import InputFeedback from './InputFeedback.js';
 
 const Enroll = (props) => {
@@ -15,10 +16,12 @@ const Enroll = (props) => {
                 value={props.values}
                 onChange={props.changes}
             />
+           
             <InputFeedback
                 inputID={props.inputErrorID}
                 enrollError={props.enrollError}
             />
+            
         
     </form>
     );
