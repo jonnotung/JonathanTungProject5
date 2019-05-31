@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import "react-tabs/style/react-tabs.css";
 import CreateEntry from './CreateEntry.js';
 import UpdateEntry from './UpdateEntry.js';
+import Stats from './Stats.js';
 import './App.css';
 
 //Main app class 
@@ -16,6 +17,7 @@ class App extends Component {
           <TabList>
             <Tab>Create</Tab>
             <Tab>Update</Tab>
+            <Tab>Stats</Tab>
           </TabList>
 
           
@@ -39,6 +41,17 @@ class App extends Component {
               classNames="fade"
             >
               <UpdateEntry />
+            </CSSTransition>
+          </TabPanel>
+
+          <TabPanel>
+            <CSSTransition
+              in={true}
+              appear={true}
+              timeout={900}
+              classNames="fade"
+            >
+              <Stats />
             </CSSTransition>
           </TabPanel>
           

@@ -19,7 +19,7 @@ const InputFeedback = (props) => {
                             <p>Enter a name that's between 1 and 25 characters!</p>
                         </div>
                     </CSSTransition>:
-                        <Fragment></Fragment>
+                        ''
                 }
 
                 {/* check if it's a class enrollment error */}
@@ -35,7 +35,7 @@ const InputFeedback = (props) => {
                             
                         </div>
                     </CSSTransition>:
-                        <Fragment></Fragment>
+                        ''
                     
                 }
 
@@ -51,7 +51,7 @@ const InputFeedback = (props) => {
                             <p>You must enroll between 1 and 6 classes!</p>
                         </div>
                     </CSSTransition> :
-                        <Fragment></Fragment>
+                        ''
                 }
             
         </Fragment>

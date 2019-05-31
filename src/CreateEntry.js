@@ -65,6 +65,7 @@ class CreateEntry extends CreateSharedElements {
                     <Header />
                     {/* put handeSubmit on parent element of forms to prevent default behaviour for both when sumbitted */}
                     <section className="createForms" onSubmit={this.handleSubmit}>
+                        <h2>Create Entry</h2>
                         <CreateName
                             changes={this.handleChange.bind(this)}
                             values={this.state.name}
@@ -80,19 +81,14 @@ class CreateEntry extends CreateSharedElements {
                        
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
 
-                        <CSSTransition 
-                            in={this.state.enrolled.length > 0}
-                            appear={true}
-                            timeout={300}
-                            classNames="fade"
-                        >
-                            <EnrolledList 
-                                enrolled={this.state.enrolled}
-                                handleDelete={this.handleDeleteEnroll.bind(this)}
-                                anythingEnrolled={this.state.enrolled.length > 0}
-                                numEnrolled={this.state.enrolled.length}
-                            />
-                        </CSSTransition>
+                        
+                        <EnrolledList 
+                            enrolled={this.state.enrolled}
+                            handleDelete={this.handleDeleteEnroll.bind(this)}
+                            anythingEnrolled={this.state.enrolled.length > 0}
+                            numEnrolled={this.state.enrolled.length}
+                        />
+                        
                         
                         <button className="createButton" onClick={this.handleCreate.bind(this)}>Create Entry</button>
                     </section>

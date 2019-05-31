@@ -12,18 +12,19 @@ const EnrolledList = (props) => {
             <ul className="enrolledList">
                 { props.enrolled.map((currentClass, i) => {
                     return (
-                        <CSSTransition
-                            in={true}
-                            appear={true}
-                            timeout={300}
-                            classNames="fade"
-                        >
                             <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
-                                <button className="enrolledListButton">
-                                    {currentClass} <i className="far fa-times-circle"></i>
-                                </button>
+                                <CSSTransition
+                                    in={true}
+                                    appear={true}
+                                    timeout={300}
+                                    classNames="fade"
+                                >
+                                    <button className="enrolledListButton">
+                                        {currentClass} <i className="far fa-times-circle"></i>
+                                    </button>
+                                </CSSTransition>
                             </li>
-                        </CSSTransition>);
+                        );
                         
                     } )
                 }

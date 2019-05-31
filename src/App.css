@@ -424,4 +424,26 @@ button.enrolledListButton {
 .react-tabs__tab-list {
   background: #F1FFFA;
 }
+
+.stats button {
+  margin-top: 20px;
+  font-size: 4rem;
+}
+
+.stats button li {
+  font-size: 2rem;
+}
+
+.expandedEnrolled {
+  background: #F1FFFA;
+  display: inline-block;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.expandedEnrolled li {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  list-style: inside;
+}
 /*# sourceMappingURL=App.css.map */
