@@ -19,3 +19,24 @@
     padding: 0 10px;
     list-style: inside;  
 }
+
+//transition animations - slide down
+.fade-enter,
+.fade-appear {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active,
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 900ms ease;
+}
+
+.fade-leave {
+    opacity: 0; 
+}
+
+.fade-leave.fade-leave-active {
+    opacity: 1;
+    transition: opacity 900ms ease;
+} 

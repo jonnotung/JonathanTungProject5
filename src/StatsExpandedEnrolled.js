@@ -18,8 +18,7 @@ const StatsExpandedEnrolled = (props) => {
                     return (
                         <li>{item}</li>
                     )
-                }) :
-                ''
+                }) : ''
             }
             </ul>
         </CSSTransition>

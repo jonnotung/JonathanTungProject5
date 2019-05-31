@@ -8,7 +8,10 @@ class Stats extends Component {
         super();
         this.state ={
             entries: [],
-            openEntries: []
+            openEntries: [],
+            numClasses: 0,
+            classes: [],
+            numStudents: 0,
         };
     }
 
@@ -17,6 +20,7 @@ class Stats extends Component {
 
         //get data back from firebase
         //listen to and refresh on changes
+        //do all the work here to avoid sync conflicts with data coming in
         dbRef.on('value', (data) => {
             const currentEntries = [];
             for (let key in data.val()) {
@@ -26,10 +30,20 @@ class Stats extends Component {
                 })
             }
             
+            this.parseClasses(currentEntries);
+
             this.setState({
+                numStudents: currentEntries.length,
                 entries: currentEntries
             });
+
+
         });
+    }
+
+    parseClasses = (entries) => {
+        const classList = [];
+        
     }
 
     handleClick = (index) => {
@@ -54,7 +68,8 @@ class Stats extends Component {
     render() {
         return(
             <div className="innerWrapper stats">
-                <h2>Info on Currently Entered Students:</h2>
+                <h2>Info Summary:</h2>
+                <h3>Students: {this.state.numStudents}</h3>
                 <StatsEnrolled
                     entries={this.state.entries}
                     handleClick={this.handleClick}
