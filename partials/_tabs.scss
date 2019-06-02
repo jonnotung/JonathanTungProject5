@@ -4,17 +4,22 @@
 
 
 .react-tabs__tab--selected.react-tabs__tab {
+    font-family: $headers;
     background: $background;
     color: $elementMain;
-    border-radius: 5px 5px 0 0;
     font-family: $subheaders;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     text-shadow:2px 1px $text,
     4px 2px $text;
 }
 
+.react-tabs__tab.react-tabs__tab--selected {
+    font-family: $headers;
+}
+
 .react-tabs__tab {
-    font-size: 1.4rem;
+    font-family: $headers;
+    font-size: 1.7rem;
     font-weight: bold;
     color: $text;
     border: none;
@@ -23,6 +28,39 @@
 
 .react-tabs__tab-list {
     border-bottom: none;
+    margin-top: 2.5vh;
+    display: flex;
+    justify-content: space-around;
 }
 
+//-----------------------------------------------
+//---------media queries for responsive---------
+//----------------------------------------------
 
+@media(min-width: 410px) {
+    .react-tabs__tab,
+    .react-tabs__tab--selected.react-tabs__tab  {
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width: 600px) {
+    .react-tabs__tab,
+    .react-tabs__tab--selected.react-tabs__tab  {
+        font-size: 3rem;
+    }
+}
+
+@media(min-width: 950px) {
+    .react-tabs__tab,
+    .react-tabs__tab--selected.react-tabs__tab  {
+        font-size: 3.5rem;
+    }
+}
+
+@media(min-width: 1300px) {
+    .react-tabs__tab,
+    .react-tabs__tab--selected.react-tabs__tab  {
+        font-size: 4.5rem;
+    }
+}

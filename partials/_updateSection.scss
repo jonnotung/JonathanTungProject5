@@ -20,3 +20,51 @@
     padding: 25px 20px;
     border-radius: 25px;
 }
+
+//-----------------------------------------------
+//---------media queries for responsive---------
+//----------------------------------------------
+ 
+@media(min-width: 410px) {
+    .searchButton {
+        font-size: 2rem;
+    }
+
+    .update h3,
+    .updateButton {  
+        font-size: 2.25rem;
+    }
+}
+
+@media(min-width: 600px) {
+    .searchButton {
+        font-size: 2.25rem;
+    }
+
+    .update h3,
+    .updateButton {  
+        font-size: 2.5rem;
+    }
+}
+
+@media(min-width: 950px) {
+    .searchButton {
+        font-size: 3rem;
+    }
+
+    .update h3,
+    .updateButton {  
+        font-size: 2.75rem;
+    }
+}
+
+@media(min-width: 950px) {
+    .searchButton {
+        font-size: 3.5rem;
+    }
+
+    .update h3,
+    .updateButton {  
+        font-size: 3.5rem;
+    }
+}

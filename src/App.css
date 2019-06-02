@@ -232,6 +232,10 @@ button {
   font-family: "Signika", sans-serif;
 }
 
+h3 {
+  font-family: "Rajdhani", sans-serif;
+}
+
 h2 {
   color: #182D40;
   font-family: "Rajdhani", sans-serif;
@@ -248,6 +252,7 @@ label {
 input {
   font-size: 1rem;
   width: 100%;
+  border: 2px solid #38AECC;
 }
 
 input:focus {
@@ -334,6 +339,89 @@ button:focus {
   transition: opacity 900ms ease;
 }
 
+@media (min-width: 410px) {
+  .inputWarning {
+    padding: 0 10px;
+  }
+  .inputWarning p,
+  input,
+  p {
+    font-size: 1.5rem;
+  }
+  h1 {
+    font-size: 4.25rem;
+  }
+  h2 {
+    font-size: 2.75em;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .inputWarning p,
+  input,
+  p {
+    font-size: 1.85rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.75rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .inputWarning p,
+  input,
+  p {
+    font-size: 2.15rem;
+  }
+  h1 {
+    font-size: 5.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .inputWarning p,
+  input,
+  p {
+    font-size: 2.5rem;
+  }
+  h1 {
+    font-size: 7.5rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.9rem;
+  }
+}
+
 h1 {
   text-align: center;
   text-shadow: 2px 1px #F1FFFA, 4px 2px #F1FFFA, 6px 4px #F1FFFA;
@@ -371,7 +459,7 @@ form {
 
 button.enrolledListButton {
   width: 100%;
-  padding: 5px 0;
+  padding: 15px 0;
   text-align: center;
   background: #F1FFFA;
   border: 1px solid #182D40;
@@ -383,6 +471,63 @@ button.enrolledListButton {
   font-size: 2rem;
   padding: 25px 20px;
   border-radius: 25px;
+}
+
+@media (min-width: 410px) {
+  button.enrolledListButton {
+    font-size: 1rem;
+  }
+  .fa-times-circle {
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 600px) {
+  button.enrolledListButton {
+    font-size: 1.5rem;
+  }
+  .fa-times-circle {
+    font-size: 1.5rem;
+  }
+  .enrollButton {
+    font-size: 2.25rem;
+  }
+  .createButton {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 950px) {
+  button.enrolledListButton {
+    font-size: 2rem;
+  }
+  .fa-times-circle {
+    font-size: 1.75rem;
+    margin-left: 20px;
+  }
+  .enrollButton {
+    font-size: 3rem;
+  }
+  .createButton {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  button.enrolledListButton {
+    font-size: 2.5rem;
+  }
+  .fa-times-circle {
+    font-size: 2rem;
+    margin-left: 20px;
+  }
+  .enrollButton {
+    font-size: 3.5rem;
+  }
+  .createButton {
+    font-size: 4rem;
+  }
 }
 
 .searchButton {
@@ -408,17 +553,62 @@ button.enrolledListButton {
   border-radius: 25px;
 }
 
+@media (min-width: 410px) {
+  .searchButton {
+    font-size: 2rem;
+  }
+  .update h3,
+  .updateButton {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .searchButton {
+    font-size: 2.25rem;
+  }
+  .update h3,
+  .updateButton {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .searchButton {
+    font-size: 3rem;
+  }
+  .update h3,
+  .updateButton {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .searchButton {
+    font-size: 3.5rem;
+  }
+  .update h3,
+  .updateButton {
+    font-size: 3.5rem;
+  }
+}
+
 .react-tabs__tab--selected.react-tabs__tab {
+  font-family: "Rajdhani", sans-serif;
   background: #73C1C6;
   color: #F1FFFA;
-  border-radius: 5px 5px 0 0;
   font-family: "Signika", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   text-shadow: 2px 1px #182D40, 4px 2px #182D40;
 }
 
+.react-tabs__tab.react-tabs__tab--selected {
+  font-family: "Rajdhani", sans-serif;
+}
+
 .react-tabs__tab {
-  font-size: 1.4rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #182D40;
   border: none;
@@ -427,6 +617,40 @@ button.enrolledListButton {
 
 .react-tabs__tab-list {
   border-bottom: none;
+  margin-top: 2.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 410px) {
+  .react-tabs__tab,
+  .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .react-tabs__tab,
+  .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .react-tabs__tab,
+  .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .react-tabs__tab,
+  .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 4.5rem;
+  }
 }
 
 .stats button {
@@ -477,16 +701,47 @@ button.enrolledListButton {
 }
 
 .stats .react-tabs__tab--selected.react-tabs__tab {
-  font-family: "Signika", sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-size: 1.5rem;
+  bottom: 0;
 }
 
 .stats .react-tabs__tab {
   font-size: 1.5rem;
   letter-spacing: 0px;
+  bottom: 0;
 }
 
 .stats .react-tabs__tab-list {
   width: 100%;
+  border-bottom: 2px solid #F1FFFA;
+}
+
+@media (min-width: 410px) {
+  .stats .react-tabs__tab,
+  .stats .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .stats .react-tabs__tab,
+  .stats .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .stats .react-tabs__tab,
+  .stats .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .stats .react-tabs__tab,
+  .stats .react-tabs__tab--selected.react-tabs__tab {
+    font-size: 3.75rem;
+  }
 }
 /*# sourceMappingURL=App.css.map */

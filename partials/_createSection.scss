@@ -13,6 +13,10 @@ h3 {
     margin-top: 2.5vh;
 }
 
+//----------------------------------
+//---------create entry form---------
+//----------------------------------
+
 form {
     margin-top: 5vh;
 }
@@ -42,16 +46,90 @@ form {
 //dynamic enrolled list items you can click to delete
 button.enrolledListButton {
     width: 100%;
-    padding: 5px 0;
+    padding: 15px 0;
     text-align: center;
     background: $elementMain;
     border: 1px solid $text;
     border-radius: 10px;
+    
 }
+
 
 .createButton {
     margin: 5vh auto 5vh auto;
     font-size: 2rem;
     padding: 25px 20px; 
     border-radius: 25px;
+}
+
+//-----------------------------------------------
+//---------media queries for responsive---------
+//----------------------------------------------
+ 
+@media(min-width: 410px) {
+    button.enrolledListButton {
+        font-size: 1rem;
+    }
+    
+    .fa-times-circle {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+} 
+
+
+
+@media(min-width: 600px) {
+    button.enrolledListButton {
+        font-size: 1.5rem;
+    }
+
+    .fa-times-circle {
+        font-size: 1.5rem;
+    }
+    .enrollButton {
+        font-size: 2.25rem;
+    }
+
+    .createButton {
+        
+        font-size: 2.75rem;
+        
+    }
+}
+
+@media(min-width: 950px) {
+    button.enrolledListButton {
+        font-size: 2rem;
+    }
+
+    .fa-times-circle {
+        font-size: 1.75rem;
+        margin-left: 20px;
+    }
+    .enrollButton {
+        font-size: 3rem;
+    }
+
+    .createButton {
+        font-size: 3.5rem;
+    }
+}
+
+@media(min-width: 1300px) {
+    button.enrolledListButton {
+        font-size: 2.5rem;
+    }
+
+    .fa-times-circle {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+    .enrollButton {
+        font-size: 3.5rem;
+    }
+
+    .createButton {
+        font-size: 4rem;
+    }
 }
