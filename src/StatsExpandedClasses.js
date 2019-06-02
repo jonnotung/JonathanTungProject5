@@ -2,10 +2,9 @@ import React, {Fragment} from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 const StatsExpandedClasses = (props) => {
-    console.log(props.studentsIn)
     return(
         <CSSTransition
-            in={props.openEntries.includes(props.key)}
+            in={props.openEntries.includes(props.currentKey)}
             appear={true}
             timeout={900}
             classNames="fade"

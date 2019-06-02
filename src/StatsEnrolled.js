@@ -2,17 +2,25 @@ import React, {Fragment} from 'react';
 import StatsExpandedEnrolled from './StatsExpandedEnrolled.js';
 
 const StatsEnrolled = (props) => {
+    const openClosedMap = {
+        labelMessage: "Expand",
+        caret: "down"
+    };
 
     return(
         <ul>
             {props.entries.map((entry, i) => {
+                if (props.openEntries.includes(i)){
+                    openClosedMap.labelMessage="Close";
+                    openClosedMap.caret="up";
+                } 
                 return (
                     <Fragment key={i}>
                         <li index={i}>
                         <button  onClick={() => props.handleClick(i)}>
                             {entry.name} 
-                            <label className="visuallyHidden">Expand</label>
-                            <i className="far fa-caret-square-down"></i>
+                            <label className="visuallyHidden">{openClosedMap.labelMessage}</label>
+                            <i className={`fas fa-caret-${openClosedMap.caret}`}></i>
                         </button>
                         </li>
                         
