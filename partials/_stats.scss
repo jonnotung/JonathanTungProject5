@@ -1,10 +1,13 @@
 .stats button {
     margin-top: 20px;
     font-size: 4rem;
+    padding: 5px 10px;
+    font-size: 1.5rem;
 }
 
-.stats button li {
-    font-size: 2rem;
+.stats i {
+    font-size: 1rem;
+    margin-left: 5px;
 }
 
 .expandedEnrolled {
@@ -40,3 +43,21 @@
     opacity: 1;
     transition: opacity 900ms ease;
 } 
+
+//-----------------------------------
+//--------tab for subsections-------
+//----------------------------------
+
+.stats .react-tabs__tab--selected.react-tabs__tab {
+    font-family: $subheaders;
+    font-size: 1.5rem;
+}
+
+.stats .react-tabs__tab {
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+}
+
+.stats .react-tabs__tab-list {
+    width: 100%;
+}

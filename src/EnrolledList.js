@@ -20,7 +20,9 @@ const EnrolledList = (props) => {
                                     classNames="fade"
                                 >
                                     <button className="enrolledListButton">
-                                        {currentClass} <i className="far fa-times-circle"></i>
+                                        {currentClass} 
+                                        <label className="visuallyHidden">Remove</label>
+                                        <i className="far fa-times-circle"></i>
                                     </button>
                                 </CSSTransition>
                             </li>

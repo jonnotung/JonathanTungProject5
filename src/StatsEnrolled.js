@@ -7,10 +7,14 @@ const StatsEnrolled = (props) => {
         <ul>
             {props.entries.map((entry, i) => {
                 return (
-                    <Fragment>
-                        <button key={i} index={i} onClick={() => props.handleClick(i)}>
-                            <li >{entry.name}</li>
+                    <Fragment key={i}>
+                        <li index={i}>
+                        <button  onClick={() => props.handleClick(i)}>
+                            {entry.name} 
+                            <label className="visuallyHidden">Expand</label>
+                            <i className="far fa-caret-square-down"></i>
                         </button>
+                        </li>
                         
                         <StatsExpandedEnrolled
                             openEntries={props.openEntries}

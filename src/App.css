@@ -410,28 +410,35 @@ button.enrolledListButton {
 
 .react-tabs__tab--selected.react-tabs__tab {
   background: #73C1C6;
-  border-color: #F1FFFA;
-  color: #182D40;
+  color: #F1FFFA;
   border-radius: 5px 5px 0 0;
   font-family: "Signika", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.4rem;
+  text-shadow: 2px 1px #182D40, 4px 2px #182D40;
 }
 
 .react-tabs__tab {
-  font-size: 1.15rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #182D40;
+  border: none;
+  letter-spacing: 2px;
 }
 
 .react-tabs__tab-list {
-  background: #F1FFFA;
+  border-bottom: none;
 }
 
 .stats button {
   margin-top: 20px;
   font-size: 4rem;
+  padding: 5px 10px;
+  font-size: 1.5rem;
 }
 
-.stats button li {
-  font-size: 2rem;
+.stats i {
+  font-size: 1rem;
+  margin-left: 5px;
 }
 
 .expandedEnrolled {
@@ -445,5 +452,41 @@ button.enrolledListButton {
   font-size: 1.5rem;
   padding: 0 10px;
   list-style: inside;
+}
+
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active,
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  -webkit-transition: opacity 900ms ease;
+  transition: opacity 900ms ease;
+}
+
+.fade-leave {
+  opacity: 0;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 1;
+  -webkit-transition: opacity 900ms ease;
+  transition: opacity 900ms ease;
+}
+
+.stats .react-tabs__tab--selected.react-tabs__tab {
+  font-family: "Signika", sans-serif;
+  font-size: 1.5rem;
+}
+
+.stats .react-tabs__tab {
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+}
+
+.stats .react-tabs__tab-list {
+  width: 100%;
 }
 /*# sourceMappingURL=App.css.map */
