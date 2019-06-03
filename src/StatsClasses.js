@@ -8,7 +8,8 @@ const StatClasses = (props) => {
     };
     return(
         <Fragment>
-            <ul>
+            <ul className="expandedList">
+            <h3>Classes in the database. Expand to show the students in each class.</h3>
                 {Object.keys(props.classStudents).map( (key) => {
                     if (props.openEntries.includes(key)){
                         openClosedMap.labelMessage="Close";

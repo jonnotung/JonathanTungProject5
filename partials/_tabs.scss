@@ -11,10 +11,12 @@
     font-size: 1.7rem;
     text-shadow:2px 1px $text,
     4px 2px $text;
+    bottom: 0;
 }
 
 .react-tabs__tab.react-tabs__tab--selected {
     font-family: $headers;
+    bottom: 0;
 }
 
 .react-tabs__tab {
@@ -24,6 +26,7 @@
     color: $text;
     border: none;
     letter-spacing: 2px;
+    bottom: 0;
 }
 
 .react-tabs__tab-list {
@@ -31,6 +34,7 @@
     margin-top: 2.5vh;
     display: flex;
     justify-content: space-around;
+    border-bottom: 3px solid $elementMain;
 }
 
 //-----------------------------------------------

@@ -14,6 +14,7 @@ class App extends Component {
     return (
       <div className="App outerWrapper">
         <Tabs>
+          <label className="visuallyHidden">Use left and right arrow keys to navigate the menu</label>
           <TabList>
             <Tab>Create</Tab>
             <Tab>Update</Tab>

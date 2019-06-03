@@ -103,10 +103,10 @@ class Stats extends Component {
                 <p>Students: {this.state.numStudents}</p>
                 <p>Classes: {this.state.classes.length}</p>
                 <Tabs>
+                    <label className="visuallyHidden">Use left and right arrow keys to navigate the menu</label>
                     <TabList>
                         <Tab>Students</Tab>
                         <Tab>Classes</Tab>
-                        
                     </TabList>
 
                     <TabPanel>

@@ -8,7 +8,8 @@ const StatsEnrolled = (props) => {
     };
 
     return(
-        <ul>
+        <ul className="expandedList">
+            <h3>Students in the database. Expand to show classes they are enrolled in.</h3>
             {props.entries.map((entry, i) => {
                 if (props.openEntries.includes(i)){
                     openClosedMap.labelMessage="Close";
