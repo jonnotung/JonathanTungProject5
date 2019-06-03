@@ -223,6 +223,7 @@ h1 {
   color: #182D40;
   font-family: "Rajdhani", sans-serif;
   font-size: 4rem;
+  font-weight: 600;
 }
 
 h3,
@@ -241,6 +242,7 @@ h2 {
   font-family: "Rajdhani", sans-serif;
   text-align: center;
   font-size: 2.5rem;
+  font-weight: 600;
   text-shadow: 2px 1px #F1FFFA, 4px 2px #F1FFFA;
 }
 
@@ -600,19 +602,21 @@ button.enrolledListButton {
   color: #F1FFFA;
   font-family: "Signika", sans-serif;
   font-size: 1.7rem;
+  font-weight: 600;
   text-shadow: 2px 1px #182D40, 4px 2px #182D40;
   bottom: 0;
 }
 
 .react-tabs__tab.react-tabs__tab--selected {
   font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
   bottom: 0;
 }
 
 .react-tabs__tab {
   font-family: "Rajdhani", sans-serif;
   font-size: 1.7rem;
-  font-weight: bold;
+  font-weight: 600;
   color: #182D40;
   border: none;
   letter-spacing: 2px;
@@ -676,6 +680,19 @@ button.enrolledListButton {
   margin-top: 5px;
 }
 
+.expandedList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .expandedEnrolled li {
   font-size: 1.5rem;
   padding: 5px 10px;
@@ -715,11 +732,13 @@ button.enrolledListButton {
 .stats .react-tabs__tab--selected.react-tabs__tab {
   font-family: "Rajdhani", sans-serif;
   font-size: 1.5rem;
+  font-weight: 600;
   bottom: 0;
 }
 
 .stats .react-tabs__tab {
   font-size: 1.5rem;
+  font-weight: 600;
   letter-spacing: 0px;
   bottom: 0;
 }
@@ -755,18 +774,6 @@ button.enrolledListButton {
   }
   .expandedEnrolled li {
     font-size: 1.9rem;
-  }
-  .expandedList {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .stats p {
     font-size: 2.25rem;

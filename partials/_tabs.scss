@@ -9,6 +9,7 @@
     color: $elementMain;
     font-family: $subheaders;
     font-size: 1.7rem;
+    font-weight: 600;
     text-shadow:2px 1px $text,
     4px 2px $text;
     bottom: 0;
@@ -16,13 +17,14 @@
 
 .react-tabs__tab.react-tabs__tab--selected {
     font-family: $headers;
+    font-weight: 600;
     bottom: 0;
 }
 
 .react-tabs__tab {
     font-family: $headers;
     font-size: 1.7rem;
-    font-weight: bold;
+    font-weight: 600;
     color: $text;
     border: none;
     letter-spacing: 2px;
