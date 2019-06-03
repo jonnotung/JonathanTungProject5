@@ -15,7 +15,7 @@ const StatsExpandedEnrolled = (props) => {
             timeout={900}
             classNames="fade"
         >
-            <ul className="expandedEnrolled">
+            <ul className="expandedEnrolled" aria-live="polite">
             {
                 props.openEntries.includes(props.i) ?
                 props.entry.enrolled.map((item, i) => {

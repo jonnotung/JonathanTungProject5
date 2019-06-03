@@ -13,7 +13,7 @@ const EnrolledList = (props) => {
             <InputFeedback
                 numEnrolled={props.numEnrolled}
             />
-            <ul className="enrolledList">
+            <ul className="enrolledList" aria-live="polite">
                 {/* iterate over array of enrolled classes */}
                 { props.enrolled.map((currentClass, i) => {
                     return (

@@ -12,6 +12,11 @@ import './App.css';
 // ------------------------------------------------------------------
 class App extends Component {
 
+  componentDidMount() {
+    //set app title for accessibility
+    document.title = "Class Database";
+  }
+
   render() {
     return (
       <div className="App outerWrapper">

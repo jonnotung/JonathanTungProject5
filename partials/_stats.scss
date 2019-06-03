@@ -36,7 +36,9 @@
     padding-bottom: 40px;
 }
 
-//transition animations - slide down
+//------------------------------------------------
+//-----react transitions classes, generated-------
+//------------------------------------------------
 .fade-enter,
 .fade-appear {
     opacity: 0;
@@ -57,9 +59,9 @@
     transition: opacity 900ms ease;
 } 
 
-//-----------------------------------
-//--------tab for subsections-------
-//----------------------------------
+//---------------------------------------------
+//--------tab for subsections, generated-------
+//---------------------------------------------
 
 .stats .react-tabs__tab--selected.react-tabs__tab {
     font-family: $headers;

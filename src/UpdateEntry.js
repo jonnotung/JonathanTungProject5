@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import CreateSharedElements from "./CreateSharedElements.js";
 import Enroll from "./Enroll.js";
 import EnrolledList from "./EnrolledList";
@@ -130,7 +130,7 @@ class UpdateEntry extends CreateSharedElements {
                 {/* Check if we"ve successfully searched for a student */}
                 {/* Only display this when we have */}
                 { Object.keys(this.state.currentStudent).length >= 1 ?
-                    <Fragment>
+                    <div aria-live="polite">
                         <h3>Entry for {this.state.currentStudent.name}</h3>
                         <Enroll
                             changes={this.handleChange.bind(this)}
@@ -147,8 +147,8 @@ class UpdateEntry extends CreateSharedElements {
                             numEnrolled={this.state.enrolled.length}
                         />
                         <button className="updateButton" onClick={this.handleUpdate.bind(this)}>Update Entry</button>
-                    </Fragment> :
-                    <Fragment></Fragment>
+                    </div> :
+                    ""
                 }
             </div>
         );
