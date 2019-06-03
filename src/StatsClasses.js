@@ -23,20 +23,20 @@ const StatClasses = (props) => {
                         openClosedMap.caret="up";
                     }
                     return(
-                            <Fragment>
-                                <li key={key} index={key}>
-                                    <button  onClick={() => props.handleClick(key)}>
-                                        {key}
-                                        <label className="visuallyHidden">{openClosedMap.labelMessage}</label>
-                                        <i className={`fas fa-caret-${openClosedMap.caret}`}></i>
-                                    </button> 
-                                </li>
-                                <StatsExpandedClasses
-                                    openEntries={props.openEntries}
-                                    currentKey={key}
-                                    studentsIn={props.classStudents[key]}
-                                />
-                           </Fragment>
+                        <Fragment>
+                            <li key={key} index={key}>
+                                <button  onClick={() => props.handleClick(key)}>
+                                    {key}
+                                    <label className="visuallyHidden">{openClosedMap.labelMessage}</label>
+                                    <i className={`fas fa-caret-${openClosedMap.caret}`}></i>
+                                </button> 
+                            </li>
+                            <StatsExpandedClasses
+                                openEntries={props.openEntries}
+                                currentKey={key}
+                                studentsIn={props.classStudents[key]}
+                            />
+                        </Fragment>
                     );
                 } )}
             </ul>

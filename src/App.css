@@ -328,8 +328,8 @@ button:focus {
 .fade-enter.fade-enter-active,
 .fade-appear.fade-appear-active {
   opacity: 1;
-  -webkit-transition: opacity 900ms ease;
-  transition: opacity 900ms ease;
+  -webkit-transition: opacity 600ms ease;
+  transition: opacity 600ms ease;
 }
 
 .fade-exit {
@@ -338,8 +338,8 @@ button:focus {
 
 .fade-exit.fade-exit-active {
   opacity: 0;
-  -webkit-transition: opacity 900ms ease;
-  transition: opacity 900ms ease;
+  -webkit-transition: opacity 600ms ease;
+  transition: opacity 600ms ease;
 }
 
 @media (min-width: 410px) {

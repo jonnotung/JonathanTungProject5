@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import { CSSTransition } from "react-transition-group";
+import React from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 // ------------------------------------------------------------------------------
 // -----Component for expanded list of students taking a class----------------
@@ -7,23 +7,25 @@ import { CSSTransition } from "react-transition-group";
 
 const StatsExpandedClasses = (props) => {
     return(
-        <CSSTransition
-            in={props.openEntries.includes(props.currentKey)}
-            appear={true}
-            timeout={900}
-            classNames="fade"
-        >
-            <ul className="expandedEnrolled" aria-live="polite">
+        
+        <TransitionGroup className="expandedEnrolled" aria-live="polite">
             {
                 props.openEntries.includes(props.currentKey) ?
                 props.studentsIn.map((item, i) => {
                     return (
-                        <li key={i}>{item}</li>
+                        <CSSTransition
+                            in={props.openEntries.includes(props.currentKey)}
+                            appear={true}
+                            timeout={900}
+                            classNames="fade"
+                        >
+                            <li key={i}>{item}</li>
+                        </CSSTransition>
                     )
                 }) : ""
             }
-            </ul>
-        </CSSTransition>
+        </TransitionGroup>
+        
         
     );
     

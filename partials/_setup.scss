@@ -166,7 +166,7 @@ button:focus {
 .fade-enter.fade-enter-active,
 .fade-appear.fade-appear-active {
     opacity: 1;
-    transition: opacity 900ms ease;
+    transition: opacity 600ms ease;
 }
 
 .fade-exit {
@@ -175,7 +175,7 @@ button:focus {
 
 .fade-exit.fade-exit-active {
     opacity: 0;
-    transition: opacity 900ms ease;
+    transition: opacity 600ms ease;
 } 
 
 //-----------------------------------------------

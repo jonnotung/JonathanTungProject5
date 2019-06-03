@@ -14,7 +14,6 @@ const EnrolledList = (props) => {
                 numEnrolled={props.numEnrolled}
             />
             <TransitionGroup className="enrolledList" aria-live="polite">
-            {/* <ul className="enrolledList" aria-live="polite"> */}
                 
                 {/* iterate over array of enrolled classes */}
                 { props.enrolled.map((currentClass, i) => {
@@ -40,7 +39,6 @@ const EnrolledList = (props) => {
                     } )
                 }
                 
-            {/* </ul> */}
             </TransitionGroup>
         </Fragment>
     );
