@@ -33,7 +33,7 @@ class CreateEntry extends CreateSharedElements {
         //get data back from firebase
         //listen to and refresh on changes
         //do all the work here to avoid sync conflicts with data coming in
-        dbRef.on('value', (data) => {
+        dbRef.on("value", (data) => {
             //get a list of current names in database to check for duplicates
             let namesEntered = new Set();
             //iterate over entries
@@ -60,7 +60,7 @@ class CreateEntry extends CreateSharedElements {
             });
             //reset state to empty default
             this.setState({
-                name: ``,
+                name: "",
                 enrolled: [],
                 currentClass: "",
                 inputErrorID: -1,
@@ -71,7 +71,7 @@ class CreateEntry extends CreateSharedElements {
             this.setState({
                 inputErrorID: 0,
                 nameError: true,
-                errorMessage: "Enter a name that's between 1 and 25 characters!"
+                errorMessage: "Enter a name that"s between 1 and 25 characters!"
             });
         } else if (this.state.namesEntered.has(this.state.name)) {
             this.setState({

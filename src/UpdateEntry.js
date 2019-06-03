@@ -1,22 +1,23 @@
-import React, { Fragment } from 'react';
-import CreateSharedElements from './CreateSharedElements.js';
-import Enroll from './Enroll.js';
-import EnrolledList from './EnrolledList';
-import InputFeedback from './InputFeedback.js';
-import firebase from './firebase.js';
+import React, { Fragment } from "react";
+import CreateSharedElements from "./CreateSharedElements.js";
+import Enroll from "./Enroll.js";
+import EnrolledList from "./EnrolledList";
+import InputFeedback from "./InputFeedback.js";
+import firebase from "./firebase.js";
 
 class UpdateEntry extends CreateSharedElements {
     
     constructor() {
         super();
         this.state = {
-            name: ``,
+            name: "",
             enrolled: [],
-            currentClass: '',
+            currentClass: "",
             enrollError: false,
             nameError: false,
             inputErrorID: -1,
-            currentStudent: {}
+            currentStudent: {},
+            errorMessage: ""
         }
     }
 
@@ -26,17 +27,17 @@ class UpdateEntry extends CreateSharedElements {
         if (this.state.name) {
             //get snapshot of data in firebase
             //do things in once function to ensure we have the data before working on it
-            dbRef.once(`value`, (data) => {
+            dbRef.once("value", (data) => {
                 //variable to check if we found the entry in database
                 let found = false;
                 //iterate over the data we got back
                 for (let student in data.val()) {
-                    //if the entry's name matches the search string
+                    //if the entry"s name matches the search string
                     if(data.val()[student].name === this.state.name) {
-                        //set our state with the entry's enrolled classes and the student object
+                        //set our state with the entry"s enrolled classes and the student object
                         const tempStudent = data.val()[student];
                         tempStudent.key = student;
-                        //we've found a match
+                        //we"ve found a match
                         found = true;
                         this.setState({
                             currentStudent: tempStudent,
@@ -46,12 +47,12 @@ class UpdateEntry extends CreateSharedElements {
                         });
                     }
                 }
-                //if we didn't find a match reset state
+                //if we didn"t find a match reset state
                 if (!found) {
                     this.setState({
-                        name: ``,
+                        name: "",
                         enrolled: [],
-                        currentClass: '',
+                        currentClass: "",
                         enrollError: false,
                         nameError: false,
                         inputErrorID: -1,
@@ -76,9 +77,9 @@ class UpdateEntry extends CreateSharedElements {
             const newEnroll = {enrolled: this.state.enrolled};
             dbRef.update(newEnroll);
             this.setState ({
-                name: ``,
+                name: "",
                 enrolled: [],
-                currentClass: '',
+                currentClass: "",
                 enrollError: false,
                 inputErrorID: -1,
                 currentStudent: {}
@@ -111,7 +112,7 @@ class UpdateEntry extends CreateSharedElements {
                     <button onClick={ this.handleSearch } className="searchButton">Search</button>
                 </form>
                 
-                {/* Check if we've successfully searched for a student */}
+                {/* Check if we"ve successfully searched for a student */}
                 {/* Only display this when we have */}
                 { Object.keys(this.state.currentStudent).length >= 1 ?
                     <Fragment>

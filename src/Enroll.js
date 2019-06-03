@@ -1,6 +1,6 @@
-import React from 'react';
-import { CSSTransition} from 'react-transition-group';
-import InputFeedback from './InputFeedback.js';
+import React from "react";
+import { CSSTransition} from "react-transition-group";
+import InputFeedback from "./InputFeedback.js";
 
 const Enroll = (props) => {
     return(

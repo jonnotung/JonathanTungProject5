@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react';
-import {CSSTransition} from 'react-transition-group';
+import React, {Fragment} from "react";
+import {CSSTransition} from "react-transition-group";
 
 const InputFeedback = (props) => {
     return(
         <Fragment>
             
-                {/* check if it's a name error */}
+                {/* check if it"s a name error */}
 
                 { props.inputID === 0 && props.nameError ? 
                     
@@ -19,10 +19,10 @@ const InputFeedback = (props) => {
                             <p>{props.errorMessage}</p>
                         </div>
                     </CSSTransition>:
-                        ''
+                        ""
                 }
 
-                {/* check if it's a class enrollment error */}
+                {/* check if it"s a class enrollment error */}
                 { props.inputID === 1 && props.enrollError ? 
                     <CSSTransition
                         in={props.inputID === 1 && props.enrollError}
@@ -35,7 +35,7 @@ const InputFeedback = (props) => {
                             
                         </div>
                     </CSSTransition>:
-                        ''
+                        ""
                     
                 }
 
@@ -51,7 +51,7 @@ const InputFeedback = (props) => {
                             <p>You must enroll between 1 and 6 classes!</p>
                         </div>
                     </CSSTransition> :
-                        ''
+                        ""
                 }
             
         </Fragment>

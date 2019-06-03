@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { CSSTransition } from 'react-transition-group';
-import StatsEnrolled from './StatsEnrolled.js';
-import StatsClasses from './StatsClasses.js';
-import firebase from './firebase.js';
+import React, { Component, Fragment } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { CSSTransition } from "react-transition-group";
+import StatsEnrolled from "./StatsEnrolled.js";
+import StatsClasses from "./StatsClasses.js";
+import firebase from "./firebase.js";
 
 class Stats extends Component {
 
@@ -25,7 +25,7 @@ class Stats extends Component {
         //get data back from firebase
         //listen to and refresh on changes
         //do all the work here to avoid sync conflicts with data coming in
-        dbRef.on('value', (data) => {
+        dbRef.on("value", (data) => {
             const currentEntries = [];
             for (let key in data.val()) {
                 currentEntries.push({
@@ -81,7 +81,7 @@ class Stats extends Component {
         
         let tempOpen = [...this.state.openEntries];
         
-        //If clicked index hasn't been opened, add it to open list
+        //If clicked index hasn"t been opened, add it to open list
         if(!tempOpen.includes(index)) {     
             tempOpen.push(index);
         } else {
