@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react';
-import CreateSharedElements from './CreateSharedElements.js'
-import Header from './Header.js';
-import CreateName from './CreateName.js';
-import Enroll from './Enroll.js';
-import EnrolledList from './EnrolledList';
-import firebase from './firebase.js';
-import { CSSTransition } from 'react-transition-group';
+import React, {Fragment} from "react";
+import CreateSharedElements from "./CreateSharedElements.js"
+import Header from "./Header.js";
+import CreateName from "./CreateName.js";
+import Enroll from "./Enroll.js";
+import EnrolledList from "./EnrolledList";
+import firebase from "./firebase.js";
+import { CSSTransition } from "react-transition-group";
 
 // ------------------------------------------------------------------
 // ---separate create and update forms to have different state-------
@@ -16,12 +16,13 @@ class CreateEntry extends CreateSharedElements {
     constructor() {
         super();
         this.state = {
-            name: ``,
+            name: "",
             enrolled: [],
-            currentClass: '',
+            currentClass: "",
             inputErrorID: -1,
             nameError: false,
-            enrollError: false
+            enrollError: false,
+            errorMessage: ""
         };
     }
 
@@ -39,7 +40,7 @@ class CreateEntry extends CreateSharedElements {
             this.setState({
                 name: ``,
                 enrolled: [],
-                currentClass: '',
+                currentClass: "",
                 inputErrorID: -1,
                 nameError: false
             });
@@ -47,7 +48,7 @@ class CreateEntry extends CreateSharedElements {
             //otherwise update state to refresh to show a message to the user to enter a proper name 
             this.setState({
                 inputErrorID: -1,
-                nameError: false
+                nameError: false,
             });
         } else {
             this.setState({
@@ -77,6 +78,7 @@ class CreateEntry extends CreateSharedElements {
                             values={this.state.currentClass}
                             inputErrorID={this.state.inputErrorID}
                             enrollError={this.state.enrollError}
+                            errorMessage={this.state.errorMessage}
                         />
                        
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>

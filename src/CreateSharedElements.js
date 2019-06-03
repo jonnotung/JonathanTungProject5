@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 class CreateSharedElements extends Component {
 
@@ -13,28 +13,37 @@ class CreateSharedElements extends Component {
         const pattern = /^([a-z]|[A-Z]){3}[0-9]{3}$/;
 
         //only save if something has been entered in the correct format, 
-        //and there's less than 6 classes currently entered
-        if (pattern.exec(this.state.currentClass) && this.state.enrolled.length < 6) {
+        //and there"s less than 6 classes currently entered
+        if (pattern.exec(this.state.currentClass) && this.state.enrolled.length < 6 && !this.state.enrolled.includes(this.state.currentClass)) {
             enrolledCopy.push(this.state.currentClass);
 
             //update state with newly enrolled class
             this.setState({
                 enrolled: enrolledCopy,
                 //reset currently input class
-                currentClass: ``,
+                currentClass: "",
                 inputErrorID: -1,
                 enrollError: false
             })
+        } else if (this.state.enrolled.includes(this.state.currentClass)) {
+            //check if it"s a duplicate class. don"t enroll if it is
+            this.setState({
+                inputErrorID: 1,
+                enrollError: true,
+                errorMessage: "Cannot enter a class twice!"
+            });
+
         } else {
             //otherwise update state to refresh to show a message to the user about proper input format
             this.setState({
                 inputErrorID: 1,
-                enrollError: true
+                enrollError: true,
+                errorMessage: "Class names must be of the form (3 letters)(3 numbers)!"
             });
         }
     }
 
-    //remove a class we're enrolled in
+    //remove a class we"re enrolled in
     handleDeleteEnroll = (index) => {
         //filter out <li> we clicked on
         //save this as a new array

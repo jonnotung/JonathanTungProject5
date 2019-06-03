@@ -685,6 +685,10 @@ button.enrolledListButton {
   text-align: center;
 }
 
+.expandedList {
+  padding-bottom: 40px;
+}
+
 .fade-enter,
 .fade-appear {
   opacity: 0;

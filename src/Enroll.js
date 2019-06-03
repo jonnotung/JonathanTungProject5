@@ -20,6 +20,7 @@ const Enroll = (props) => {
             <InputFeedback
                 inputID={props.inputErrorID}
                 enrollError={props.enrollError}
+                errorMessage={props.errorMessage}
             />
             
         

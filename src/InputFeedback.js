@@ -31,7 +31,7 @@ const InputFeedback = (props) => {
                         classNames="fade"
                     >
                         <div className="inputWarning">
-                            <p>Class names must be of the form (3 letters)(3 numbers)!</p> 
+                            <p>{props.errorMessage}</p> 
                             
                         </div>
                     </CSSTransition>:
