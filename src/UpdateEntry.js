@@ -59,8 +59,8 @@ class UpdateEntry extends CreateSharedElements {
                         enrolled: [],
                         currentClass: "",
                         enrollError: false,
-                        nameError: false,
-                        inputErrorID: -1,
+                        nameError: true,
+                        inputErrorID: 0,
                         currentStudent: {},
                         errorMessage: "No matching name found in database!"
                     });
@@ -121,6 +121,7 @@ class UpdateEntry extends CreateSharedElements {
                     <InputFeedback
                         inputID={this.state.inputErrorID}
                         nameError={this.state.nameError}
+                        errorMessage={this.state.errorMessage}
                     />
                     <button onClick={ this.handleSearch } className="searchButton">Search</button>
                 </form>
