@@ -16,7 +16,7 @@ const StatsExpandedClasses = (props) => {
                         <CSSTransition
                             in={props.openEntries.includes(props.currentKey)}
                             appear={true}
-                            timeout={900}
+                            timeout={600}
                             classNames="fade"
                         >
                             <li key={i}>{item}</li>

@@ -21,7 +21,7 @@ const EnrolledList = (props) => {
                         <CSSTransition
                             in={true}
                             appear={true}
-                            timeout={300}
+                            timeout={600}
                             classNames="fade"
                         >
                             <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
