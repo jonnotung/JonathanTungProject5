@@ -1,6 +1,10 @@
 import React from "react";
 import InputFeedback from "./InputFeedback.js";
 
+// -----------------------------------------------------------------------------------
+// ---Component for name input on create entry and update sections--------------------
+// -----------------------------------------------------------------------------------
+
 const CreateName = (props) => {
     
         return(

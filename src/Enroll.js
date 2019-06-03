@@ -1,6 +1,9 @@
 import React from "react";
-import { CSSTransition} from "react-transition-group";
 import InputFeedback from "./InputFeedback.js";
+
+// ---------------------------------------------------------------------------------------
+// --component for enroll in class input section on create entry and update sections-------
+// --------------------------------------------------------------------------------------
 
 const Enroll = (props) => {
     return(

@@ -2,6 +2,10 @@ import React, {Fragment} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import InputFeedback from './InputFeedback.js';
 
+// ---------------------------------------------------------------------------------------
+// ---Component for list of clickable enrolled classes in create and update sections-------
+// ---------------------------------------------------------------------------------------
+
 const EnrolledList = (props) => {
     return(
         <Fragment>
@@ -10,6 +14,7 @@ const EnrolledList = (props) => {
                 numEnrolled={props.numEnrolled}
             />
             <ul className="enrolledList">
+                {/* iterate over array of enrolled classes */}
                 { props.enrolled.map((currentClass, i) => {
                     return (
                             <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">

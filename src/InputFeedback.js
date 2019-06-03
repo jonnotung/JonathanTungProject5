@@ -1,6 +1,10 @@
 import React, {Fragment} from "react";
 import {CSSTransition} from "react-transition-group";
 
+// ------------------------------------------------------------------
+// ----------------Component for error messages shown to user-------
+// ------------------------------------------------------------------
+
 const InputFeedback = (props) => {
     return(
         <Fragment>

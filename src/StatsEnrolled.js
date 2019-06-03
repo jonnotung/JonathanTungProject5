@@ -1,7 +1,13 @@
 import React, {Fragment} from 'react';
 import StatsExpandedEnrolled from './StatsExpandedEnrolled.js';
 
+// ------------------------------------------------------------------
+// ---------component for student list tab in stats section----------
+// ------------------------------------------------------------------
+
 const StatsEnrolled = (props) => {
+
+    //mapping to easily switch caret direction and accessible label description for expand/hide
     const openClosedMap = {
         labelMessage: "Expand",
         caret: "down"

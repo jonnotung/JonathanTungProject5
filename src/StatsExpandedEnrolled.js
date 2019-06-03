@@ -1,5 +1,9 @@
-import React, {Fragment} from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React from "react";
+import { CSSTransition } from "react-transition-group";
+
+// ---------------------------------------------------------------------------
+// ---component for expanded list of classes when you click on a student-------
+// ----------------------------------------------------------------------------
 
 const StatsExpandedEnrolled = (props) => {
     
@@ -18,7 +22,7 @@ const StatsExpandedEnrolled = (props) => {
                     return (
                         <li key={i}>{item}</li>
                     )
-                }) : ''
+                }) : ""
             }
             </ul>
         </CSSTransition>

@@ -1,5 +1,9 @@
 import React from 'react';
 
+// ------------------------------------------------------------------
+// ---------------------Intro description text section - static------
+// ------------------------------------------------------------------
+
 const Header = (props) => {
     return(
         <header className="intro">

@@ -5,7 +5,6 @@ import CreateName from "./CreateName.js";
 import Enroll from "./Enroll.js";
 import EnrolledList from "./EnrolledList";
 import firebase from "./firebase.js";
-import { CSSTransition } from "react-transition-group";
 
 // ------------------------------------------------------------------
 // ---separate create and update forms to have different state-------
@@ -27,6 +26,7 @@ class CreateEntry extends CreateSharedElements {
         };
     }
 
+    //get data from firebase on page load
     componentDidMount() {
         const dbRef = firebase.database().ref();
 
@@ -48,6 +48,7 @@ class CreateEntry extends CreateSharedElements {
         
     }
 
+    //handles click of 'create entry' button
     handleCreate = (event) => {
         const dbRef = firebase.database().ref();
 
@@ -71,16 +72,18 @@ class CreateEntry extends CreateSharedElements {
             this.setState({
                 inputErrorID: 0,
                 nameError: true,
-                errorMessage: "Enter a name that"s between 1 and 25 characters!"
+                errorMessage: "Enter a name that's between 1 and 25 characters!"
             });
         } else if (this.state.namesEntered.has(this.state.name)) {
+            //if name already exists in database let user know
             this.setState({
                 inputErrorID: 0,
                 nameError: true,
-                errorMessage: "Student already entered in database!"
+                errorMessage: "Student already exists in database!"
             });
         } else {
             this.setState({
+                //if an inproper numer of classes has been entered let user  know
                 inputErrorID: 0,
                 nameError: true,
                 errorMessage: "You must enroll between 1 and 6 classes!"

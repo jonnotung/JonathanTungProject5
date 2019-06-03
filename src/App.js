@@ -7,7 +7,9 @@ import UpdateEntry from './UpdateEntry.js';
 import Stats from './Stats.js';
 import './App.css';
 
-//Main app class 
+// ------------------------------------------------------------------
+// ---Main app wrapper component. Has no state of it's own-----------
+// ------------------------------------------------------------------
 class App extends Component {
 
   render() {

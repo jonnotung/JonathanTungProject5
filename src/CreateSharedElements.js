@@ -1,8 +1,12 @@
 import { Component } from "react";
 
+// -----------------------------------------------------------------------------------------------
+// ----Class that holds shared methods and functionality for components in create entry tab-------
+// ----------------------------------------------------------------------------------------------
+
 class CreateSharedElements extends Component {
 
-    //Enters a class to state
+    //Enters a class name to state
     handleEnroll = (event) => {
         event.preventDefault();
 
@@ -13,7 +17,7 @@ class CreateSharedElements extends Component {
         const pattern = /^([a-z]|[A-Z]){3}[0-9]{3}$/;
 
         //only save if something has been entered in the correct format, 
-        //and there"s less than 6 classes currently entered
+        //and there's less than 6 classes currently entered
         if (pattern.exec(this.state.currentClass) && this.state.enrolled.length < 6 && !this.state.enrolled.includes(this.state.currentClass)) {
             enrolledCopy.push(this.state.currentClass);
 
@@ -26,7 +30,7 @@ class CreateSharedElements extends Component {
                 enrollError: false
             })
         } else if (this.state.enrolled.includes(this.state.currentClass)) {
-            //check if it"s a duplicate class. don"t enroll if it is
+            //check if it"s a duplicate class. don't enroll if it is
             this.setState({
                 inputErrorID: 1,
                 enrollError: true,
@@ -43,7 +47,7 @@ class CreateSharedElements extends Component {
         }
     }
 
-    //remove a class we"re enrolled in
+    //remove a class we're enrolled in
     handleDeleteEnroll = (index) => {
         //filter out <li> we clicked on
         //save this as a new array
