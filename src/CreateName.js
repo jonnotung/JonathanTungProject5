@@ -18,7 +18,8 @@ const CreateName = (props) => {
                 />
                 <InputFeedback
                     inputID={props.inputErrorID}
-                    nameError={props.nameError} 
+                    nameError={props.nameError}
+                    errorMessage={props.errorMessage} 
                 />
             </form>
         );

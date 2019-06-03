@@ -16,7 +16,7 @@ const InputFeedback = (props) => {
                         classNames="fade"
                     >
                         <div className="inputWarning">
-                            <p>Enter a name that's between 1 and 25 characters!</p>
+                            <p>{props.errorMessage}</p>
                         </div>
                     </CSSTransition>:
                         ''

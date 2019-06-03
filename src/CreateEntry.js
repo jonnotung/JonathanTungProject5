@@ -22,15 +22,37 @@ class CreateEntry extends CreateSharedElements {
             inputErrorID: -1,
             nameError: false,
             enrollError: false,
-            errorMessage: ""
+            errorMessage: "",
+            namesEntered: new Set()
         };
+    }
+
+    componentDidMount() {
+        const dbRef = firebase.database().ref();
+
+        //get data back from firebase
+        //listen to and refresh on changes
+        //do all the work here to avoid sync conflicts with data coming in
+        dbRef.on('value', (data) => {
+            //get a list of current names in database to check for duplicates
+            let namesEntered = new Set();
+            //iterate over entries
+            for (let key in data.val()) {
+                namesEntered = namesEntered.add(data.val()[key].name);
+            }
+            //set entered names into state
+            this.setState({
+                namesEntered: namesEntered
+            });
+        });
+        
     }
 
     handleCreate = (event) => {
         const dbRef = firebase.database().ref();
 
         //only upload if at least 1 class has been enrolled and something is in the name field
-        if (this.state.name && this.state.enrolled.length > 0) {
+        if (this.state.name && this.state.enrolled.length > 0 && !this.state.namesEntered.has(this.state.name)) {
             //upload data stored in current state to firebase
             dbRef.push({
                 name: this.state.name,
@@ -44,16 +66,24 @@ class CreateEntry extends CreateSharedElements {
                 inputErrorID: -1,
                 nameError: false
             });
-        } else if (this.state.name) {
+        } else if (!this.state.name) {
             //otherwise update state to refresh to show a message to the user to enter a proper name 
             this.setState({
-                inputErrorID: -1,
-                nameError: false,
+                inputErrorID: 0,
+                nameError: true,
+                errorMessage: "Enter a name that's between 1 and 25 characters!"
+            });
+        } else if (this.state.namesEntered.has(this.state.name)) {
+            this.setState({
+                inputErrorID: 0,
+                nameError: true,
+                errorMessage: "Student already entered in database!"
             });
         } else {
             this.setState({
                 inputErrorID: 0,
-                nameError: true
+                nameError: true,
+                errorMessage: "You must enroll between 1 and 6 classes!"
             });
         }
     }
@@ -72,6 +102,7 @@ class CreateEntry extends CreateSharedElements {
                             values={this.state.name}
                             inputErrorID={this.state.inputErrorID}
                             nameError={this.state.nameError}
+                            errorMessage={this.state.errorMessage}
                         />
                         <Enroll 
                             changes={this.handleChange.bind(this)}
