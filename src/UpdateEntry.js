@@ -73,7 +73,8 @@ class UpdateEntry extends CreateSharedElements {
             //if no input is in search field tell user to enter something
             this.setState({
                 inputErrorID: 0,
-                nameError: true
+                nameError: true,
+                errorMessage: "Enter a name that's between 1 and 25 characters!"
             })
         }
     }
