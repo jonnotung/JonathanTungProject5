@@ -332,12 +332,12 @@ button:focus {
   transition: opacity 900ms ease;
 }
 
-.fade-leave {
-  opacity: 0;
+.fade-exit {
+  opacity: 1;
 }
 
-.fade-leave.fade-leave-active {
-  opacity: 1;
+.fade-exit.fade-exit-active {
+  opacity: 0;
   -webkit-transition: opacity 900ms ease;
   transition: opacity 900ms ease;
 }

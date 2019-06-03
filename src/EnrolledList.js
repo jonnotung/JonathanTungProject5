@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {CSSTransition} from 'react-transition-group';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import InputFeedback from './InputFeedback.js';
 
 // ---------------------------------------------------------------------------------------
@@ -13,29 +13,35 @@ const EnrolledList = (props) => {
             <InputFeedback
                 numEnrolled={props.numEnrolled}
             />
-            <ul className="enrolledList" aria-live="polite">
+            <TransitionGroup className="enrolledList" aria-live="polite">
+            {/* <ul className="enrolledList" aria-live="polite"> */}
+                
                 {/* iterate over array of enrolled classes */}
                 { props.enrolled.map((currentClass, i) => {
                     return (
+                        <CSSTransition
+                            in={true}
+                            appear={true}
+                            timeout={300}
+                            classNames="fade"
+                        >
                             <li key={i} index={i} onClick={() => props.handleDelete(i)} className="enrolledLI">
-                                <CSSTransition
-                                    in={true}
-                                    appear={true}
-                                    timeout={300}
-                                    classNames="fade"
-                                >
+                                
                                     <button className="enrolledListButton">
                                         {currentClass} 
                                         <label className="visuallyHidden">Remove</label>
                                         <i className="far fa-times-circle"></i>
                                     </button>
-                                </CSSTransition>
+                                
                             </li>
+                        </CSSTransition>
                         );
                         
                     } )
                 }
-            </ul>
+                
+            {/* </ul> */}
+            </TransitionGroup>
         </Fragment>
     );
 }
