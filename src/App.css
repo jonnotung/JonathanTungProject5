@@ -280,7 +280,8 @@ input {
 }
 
 body {
-  background: #73C1C6;
+  background: url("/public/pattern.png");
+  background-color: #73C1C6;
 }
 
 .outerWrapper {
@@ -309,7 +310,7 @@ button:focus {
   text-align: center;
   border-radius: 10px;
   border: 1px solid #F1FFFA;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .inputWarning p {

@@ -114,7 +114,8 @@ input {
 }
 
 body {
-    background: $background;
+    background: url("/public/pattern.png");
+    background-color: $background;
 }
 
 .outerWrapper {
@@ -144,7 +145,7 @@ button:focus {
     text-align: center;
     border-radius: 10px;
     border: 1px solid $elementMain;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .inputWarning p {
