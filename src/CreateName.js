@@ -1,5 +1,6 @@
 import React from "react";
 import InputFeedback from "./InputFeedback.js";
+import {TransitionGroup} from "react-transition-group";
 
 // -----------------------------------------------------------------------------------
 // ---Component for name input on create entry and update sections--------------------
@@ -20,11 +21,13 @@ const CreateName = (props) => {
                     value={props.values}
                     onChange={props.changes}
                 />
-                <InputFeedback
-                    inputID={props.inputErrorID}
-                    nameError={props.nameError}
-                    errorMessage={props.errorMessage} 
-                />
+                <TransitionGroup>
+                    <InputFeedback
+                        inputID={props.inputErrorID}
+                        nameError={props.nameError}
+                        errorMessage={props.errorMessage} 
+                    />
+                </TransitionGroup>
             </form>
         );
 }
