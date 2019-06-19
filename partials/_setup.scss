@@ -71,7 +71,7 @@ h2 {
     color: $text;
     font-family: $headers;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-shadow:2px 1px $elementMain,
     4px 2px $elementMain;
@@ -189,102 +189,43 @@ button:focus {
     .inputWarning p,
     input,
     p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     h1 {
-        font-size: 4.25rem;
-    }
-
-    h2 {
-        font-size: 2.75em;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 { 
-        font-size: 1.75rem;
-    }
-
-}
-
-@media(min-width: 600px) {
-    
-    .inputWarning p,
-    input,
-    p {
-        font-size: 1.85rem;
-    }
-
-    h1 {
-        font-size: 5rem;
-    }
-
-    h2 {
         font-size: 3.75rem;
     }
 
+    h2 {
+        font-size: 2.5rem;
+    }
+
     h3 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     h4 { 
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
 }
-
 
 @media(min-width: 950px) {
     
     .inputWarning p,
     input,
     p {
-        font-size: 2.15rem;
+        font-size: 1.25rem;
     }
 
     h1 {
-        font-size: 5.5rem;
-    }
-
-    h2 {
         font-size: 4rem;
     }
 
     h3 {
-        font-size: 2rem;
-    }
-
-    h4 { 
-        font-size: 2.25rem;
-    }
-
-}
-
-@media(min-width: 1300px) {
-    
-    .inputWarning p,
-    input,
-    p {
-        font-size: 1rem;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 3rem;
-    }
-
-    h4 { 
         font-size: 1.5rem;
     }
+
+
 
 }

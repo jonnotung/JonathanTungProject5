@@ -8,16 +8,18 @@ import StatsExpandedClasses from './StatsExpandedClasses'
 const StatClasses = (props) => {
 
     //mapping to easily switch caret icon direction and accessible label description for expand/hide
-    const openClosedMap = {
-        labelMessage: "Expand",
-        caret: "down"
-    };
+    
 
     return(
         <Fragment>
             <ul className="expandedList">
             <h3>Classes in the database. Expand to show the students in each class.</h3>
                 {Object.keys(props.classStudents).map( (key) => {
+                    let openClosedMap = {
+                        labelMessage: "Expand",
+                        caret: "down"
+                    };
+                    
                     if (props.openEntries.includes(key)){
                         openClosedMap.labelMessage="Close";
                         openClosedMap.caret="up";

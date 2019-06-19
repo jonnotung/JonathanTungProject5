@@ -100,21 +100,26 @@ class CreateEntry extends CreateSharedElements {
                     {/* put handeSubmit on parent element of forms to prevent default behaviour for both when sumbitted */}
                     <section className="createForms" onSubmit={this.handleSubmit}>
                         <h2>Create Entry</h2>
-                        <CreateName
-                            changes={this.handleChange.bind(this)}
-                            values={this.state.name}
-                            inputErrorID={this.state.inputErrorID}
-                            nameError={this.state.nameError}
-                            errorMessage={this.state.errorMessage}
-                        />
-                        <Enroll 
-                            changes={this.handleChange.bind(this)}
-                            values={this.state.currentClass}
-                            inputErrorID={this.state.inputErrorID}
-                            enrollError={this.state.enrollError}
-                            errorMessage={this.state.errorMessage}
-                        />
-                       
+                        {/* <div className="createInputs"> */}
+                            <div className="nameInputs">
+                                <CreateName
+                                    changes={this.handleChange.bind(this)}
+                                    values={this.state.name}
+                                    inputErrorID={this.state.inputErrorID}
+                                    nameError={this.state.nameError}
+                                    errorMessage={this.state.errorMessage}
+                                />
+                            </div>
+                            <div className="enrollInputs">
+                                <Enroll 
+                                    changes={this.handleChange.bind(this)}
+                                    values={this.state.currentClass}
+                                    inputErrorID={this.state.inputErrorID}
+                                    enrollError={this.state.enrollError}
+                                    errorMessage={this.state.errorMessage}
+                                />
+                            </div>
+                        {/* </div> */}
                         <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
 
                         

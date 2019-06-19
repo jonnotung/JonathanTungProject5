@@ -7,16 +7,18 @@ import StatsExpandedEnrolled from './StatsExpandedEnrolled.js';
 
 const StatsEnrolled = (props) => {
 
-    //mapping to easily switch caret direction and accessible label description for expand/hide
-    const openClosedMap = {
-        labelMessage: "Expand",
-        caret: "down"
-    };
+    
 
     return(
         <ul className="expandedList">
             <h3>Students in the database. Expand to show classes they are enrolled in.</h3>
             {props.entries.map((entry, i) => {
+                //mapping to easily switch caret direction and accessible label description for expand/hide
+                let openClosedMap = {
+                    labelMessage: "Expand",
+                    caret: "down"
+                };
+
                 if (props.openEntries.includes(i)){
                     openClosedMap.labelMessage="Close";
                     openClosedMap.caret="up";

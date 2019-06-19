@@ -87,45 +87,11 @@
 //---------media queries for responsive---------
 //----------------------------------------------
  
-@media(min-width: 450px) {
-    .stats .react-tabs__tab,
-    .stats .react-tabs__tab--selected.react-tabs__tab {
-        font-size: 2rem;
-    }
 
-    .stats button {
-        font-size: 1.75rem;
-    }
-
-    .expandedEnrolled li {
-        font-size: 1.5rem;
-    }
-
-    .stats i {
-        font-size: 1.75rem;
-    }
-}
 
 @media(min-width: 600px) {
-    .stats .react-tabs__tab,
-    .stats .react-tabs__tab--selected.react-tabs__tab {
-        font-size: 2.5rem;
-    }
-
-    .stats button {
-        font-size: 2.15rem;
-    }
-
-    .expandedEnrolled li {
-        font-size: 1.9rem;
-    }
-
-    .stats p {
-        font-size: 2.25rem;
-    }
 
     .stats i {
-        font-size: 2rem;
         margin-left: 10px;
     }
 }
@@ -133,47 +99,17 @@
 @media(min-width: 950px) {
     .stats .react-tabs__tab,
     .stats .react-tabs__tab--selected.react-tabs__tab {
-        font-size: 3rem;
+        font-size: 2rem;
     }
-
-    .stats button {
-        font-size: 2.75rem;
-    }
-
-    .expandedEnrolled li {
-        font-size: 2.25rem;
-    }
-
-    .stats p {
-        font-size: 2.5rem;
-    }
-
+ 
     .stats i {
-        font-size: 2.5rem;
         margin-left: 15px;
     }
 }
 
 @media(min-width: 1300px) {
-    .stats .react-tabs__tab,
-    .stats .react-tabs__tab--selected.react-tabs__tab {
-        font-size: 3.75rem;
-    }
-
-    .stats button {
-        font-size: 3rem;
-    }
-
-    .expandedEnrolled li {
-        font-size: 2.5rem;
-    }
-
-    .stats p {
-        font-size: 2.75rem;
-    }
 
     .stats i {
-        font-size: 2.75rem;
         margin-left: 20px;
     }
 }

@@ -241,7 +241,7 @@ h2 {
   color: #182D40;
   font-family: "Rajdhani", sans-serif;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   text-shadow: 2px 1px #F1FFFA, 4px 2px #F1FFFA;
 }
@@ -348,39 +348,19 @@ button:focus {
   .inputWarning p,
   input,
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   h1 {
-    font-size: 4.25rem;
-  }
-  h2 {
-    font-size: 2.75em;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.75rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .inputWarning p,
-  input,
-  p {
-    font-size: 1.85rem;
-  }
-  h1 {
-    font-size: 5rem;
-  }
-  h2 {
     font-size: 3.75rem;
   }
+  h2 {
+    font-size: 2.5rem;
+  }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -388,38 +368,12 @@ button:focus {
   .inputWarning p,
   input,
   p {
-    font-size: 2.15rem;
+    font-size: 1.25rem;
   }
   h1 {
-    font-size: 5.5rem;
-  }
-  h2 {
     font-size: 4rem;
   }
   h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 2.25rem;
-  }
-}
-
-@media (min-width: 1300px) {
-  .inputWarning p,
-  input,
-  p {
-    font-size: 1rem;
-  }
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 3rem;
-  }
-  h4 {
     font-size: 1.5rem;
   }
 }
@@ -433,18 +387,39 @@ h3 {
   margin-top: 2.5vh;
 }
 
+.createForms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nameInputs {
+  width: 55%;
+}
+
 form {
   margin-top: 5vh;
 }
 
+.enrollInputs {
+  width: 55%;
+}
+
 .enrollButton {
   margin-top: 2vh;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .enrolledList {
   margin: 2.5vh auto 0;
-  width: 100%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,45 +462,26 @@ button.enrolledListButton {
 
 @media (min-width: 600px) {
   button.enrolledListButton {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .fa-times-circle {
     font-size: 1.5rem;
   }
   .enrollButton {
-    font-size: 2.25rem;
-  }
-  .createButton {
-    font-size: 2.75rem;
-  }
-}
-
-@media (min-width: 950px) {
-  button.enrolledListButton {
-    font-size: 2rem;
-  }
-  .fa-times-circle {
     font-size: 1.75rem;
-    margin-left: 20px;
-  }
-  .enrollButton {
-    font-size: 3rem;
   }
   .createButton {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 1300px) {
-  button.enrolledListButton {
-    font-size: 1.2rem;
-  }
   .fa-times-circle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     margin-left: 20px;
   }
   .enrollButton {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
   .createButton {
     font-size: 2rem;
@@ -534,7 +490,7 @@ button.enrolledListButton {
 
 .searchButton {
   margin: 2vh 0;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .enrollCreate {
@@ -544,44 +500,24 @@ button.enrolledListButton {
 .update h3 {
   margin-top: 7.5vh;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-shadow: 2px 2px #F1FFFA;
 }
 
 .updateButton {
   margin: 5vh auto 5vh auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 25px 20px;
   border-radius: 25px;
 }
 
-@media (min-width: 410px) {
-  .searchButton {
-    font-size: 2rem;
-  }
-  .update h3,
-  .updateButton {
-    font-size: 2.25rem;
-  }
-}
-
 @media (min-width: 600px) {
   .searchButton {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
   .update h3,
   .updateButton {
-    font-size: 2.5rem;
-  }
-}
-
-@media (min-width: 950px) {
-  .searchButton {
-    font-size: 3rem;
-  }
-  .update h3,
-  .updateButton {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -640,24 +576,17 @@ button.enrolledListButton {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 950px) {
   .react-tabs__tab,
   .react-tabs__tab--selected.react-tabs__tab {
     font-size: 3rem;
   }
 }
 
-@media (min-width: 950px) {
-  .react-tabs__tab,
-  .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 3.5rem;
-  }
-}
-
 @media (min-width: 1300px) {
   .react-tabs__tab,
   .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -747,38 +676,8 @@ button.enrolledListButton {
   border-bottom: 2px solid #F1FFFA;
 }
 
-@media (min-width: 450px) {
-  .stats .react-tabs__tab,
-  .stats .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 2rem;
-  }
-  .stats button {
-    font-size: 1.75rem;
-  }
-  .expandedEnrolled li {
-    font-size: 1.5rem;
-  }
-  .stats i {
-    font-size: 1.75rem;
-  }
-}
-
 @media (min-width: 600px) {
-  .stats .react-tabs__tab,
-  .stats .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 2.5rem;
-  }
-  .stats button {
-    font-size: 2.15rem;
-  }
-  .expandedEnrolled li {
-    font-size: 1.9rem;
-  }
-  .stats p {
-    font-size: 2.25rem;
-  }
   .stats i {
-    font-size: 2rem;
     margin-left: 10px;
   }
 }
@@ -786,39 +685,15 @@ button.enrolledListButton {
 @media (min-width: 950px) {
   .stats .react-tabs__tab,
   .stats .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 3rem;
-  }
-  .stats button {
-    font-size: 2.75rem;
-  }
-  .expandedEnrolled li {
-    font-size: 2.25rem;
-  }
-  .stats p {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .stats i {
-    font-size: 2.5rem;
     margin-left: 15px;
   }
 }
 
 @media (min-width: 1300px) {
-  .stats .react-tabs__tab,
-  .stats .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 3.75rem;
-  }
-  .stats button {
-    font-size: 3rem;
-  }
-  .expandedEnrolled li {
-    font-size: 2.5rem;
-  }
-  .stats p {
-    font-size: 2.75rem;
-  }
   .stats i {
-    font-size: 2.75rem;
     margin-left: 20px;
   }
 }

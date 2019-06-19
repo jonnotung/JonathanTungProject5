@@ -13,25 +13,38 @@ h3 {
     margin-top: 2.5vh;
 }
 
+.createForms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 //----------------------------------
 //---------create entry form---------
 //----------------------------------
+
+.nameInputs {
+    width: 55%;
+}
 
 form {
     margin-top: 5vh;
 }
 
 //button you click to enroll a class
+.enrollInputs {
+    width: 55%;
+}
+
 .enrollButton {
     margin-top: 2vh;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .enrolledList {
     margin: 2.5vh auto 0;
-    width: 100%;
+    width: 75%;
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -81,52 +94,32 @@ button.enrolledListButton {
 
 @media(min-width: 600px) {
     button.enrolledListButton {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .fa-times-circle {
         font-size: 1.5rem;
     }
     .enrollButton {
-        font-size: 2.25rem;
-    }
-
-    .createButton {
-        
-        font-size: 2.75rem;
-        
-    }
-}
-
-@media(min-width: 950px) {
-    button.enrolledListButton {
-        font-size: 2rem;
-    }
-
-    .fa-times-circle {
         font-size: 1.75rem;
-        margin-left: 20px;
-    }
-    .enrollButton {
-        font-size: 3rem;
     }
 
     .createButton {
-        font-size: 3.5rem;
+        font-size: 2rem;
+        
     }
 }
+
 
 @media(min-width: 1300px) {
-    button.enrolledListButton {
-        font-size: 1.2rem;
-    }
+
 
     .fa-times-circle {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         margin-left: 20px;
     }
     .enrollButton {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .createButton {
