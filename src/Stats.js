@@ -109,9 +109,11 @@ class Stats extends Component {
     render() {
         return(
             <div className="innerWrapper stats">
-                <h2>Info Summary:</h2>
-                <p>Students: {this.state.numStudents}</p>
-                <p>Classes: {this.state.classes.length}</p>
+                <div className="statsSummary">
+                    <h2>Info Summary:</h2>
+                    <h4>Students: {this.state.numStudents}</h4>
+                    <h4>Classes: {this.state.classes.length}</h4>
+                </div>
                 <Tabs>
                     <label className="visuallyHidden">Use left and right arrow keys to navigate the menu</label>
                     <TabList>

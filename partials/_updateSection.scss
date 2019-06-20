@@ -1,3 +1,24 @@
+.updateSearch,
+.updateResults,
+.updateWrapper
+ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.updateResults {
+    width: 55%;
+}
+
+.updateResults input {
+    // width: 55%;
+}
+
+.nameSearch {
+    width: 55%;
+}
+
 .searchButton {
     margin: 2vh 0;
     font-size: 1.5rem;
@@ -5,6 +26,7 @@
 
 .enrollCreate {
     margin-top: 2vh; 
+    width: 100%;
 }
 
 .update h3 {

@@ -110,10 +110,11 @@ class UpdateEntry extends CreateSharedElements {
         return(
             <div className="innerWrapper update">
                 <h2>Update Existing Entries</h2>
-                <form onSubmit={this.handleSubmit}>
+                <form className="updateSearch" onSubmit={this.handleSubmit}>
                     <input 
                         type="text"
                         name="name"
+                        className="nameSearch"
                         id="nameSearch"
                         placeholder="Search for student"
                         value={this.state.name}
@@ -130,15 +131,17 @@ class UpdateEntry extends CreateSharedElements {
                 {/* Check if we"ve successfully searched for a student */}
                 {/* Only display this when we have */}
                 { Object.keys(this.state.currentStudent).length >= 1 ?
-                    <div aria-live="polite">
+                    <div aria-live="polite" className="updateWrapper">
                         <h3>Entry for {this.state.currentStudent.name}</h3>
-                        <Enroll
-                            changes={this.handleChange.bind(this)}
-                            values={this.state.currentClass}
-                            inputErrorID={this.state.inputErrorID}
-                            enrollError={this.state.enrollError}
-                        />
-                        <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
+                        <div className="updateResults">
+                            <Enroll
+                                changes={this.handleChange.bind(this)}
+                                values={this.state.currentClass}
+                                inputErrorID={this.state.inputErrorID}
+                                enrollError={this.state.enrollError}
+                            />
+                            <button className="enrollButton" onClick={this.handleEnroll.bind(this)}>Enroll</button>
+                        </div>
 
                         <EnrolledList
                             enrolled={this.state.enrolled}
