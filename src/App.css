@@ -222,7 +222,7 @@ p {
 h1 {
   color: #182D40;
   font-family: "Rajdhani", sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -351,7 +351,7 @@ button:focus {
     font-size: 1rem;
   }
   h1 {
-    font-size: 3.75rem;
+    font-size: 3.25rem;
   }
   h2 {
     font-size: 2.5rem;
@@ -371,7 +371,7 @@ button:focus {
     font-size: 1.25rem;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   h3 {
     font-size: 1.5rem;
@@ -572,21 +572,21 @@ button.enrolledListButton {
 @media (min-width: 410px) {
   .react-tabs__tab,
   .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 950px) {
   .react-tabs__tab,
   .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
 @media (min-width: 1300px) {
   .react-tabs__tab,
   .react-tabs__tab--selected.react-tabs__tab {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 

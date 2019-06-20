@@ -51,7 +51,7 @@ p {
 h1 {
     color: $text;
     font-family: $headers;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 
@@ -193,7 +193,7 @@ button:focus {
     }
 
     h1 {
-        font-size: 3.75rem;
+        font-size: 3.25rem;
     }
 
     h2 {
@@ -208,7 +208,7 @@ button:focus {
         font-size: 1.5rem;
     }
 
-}
+} 
 
 @media(min-width: 950px) {
     
@@ -219,7 +219,7 @@ button:focus {
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     h3 {

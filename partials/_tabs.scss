@@ -46,27 +46,21 @@
 @media(min-width: 410px) {
     .react-tabs__tab,
     .react-tabs__tab--selected.react-tabs__tab  {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
-@media(min-width: 600px) {
-    .react-tabs__tab,
-    .react-tabs__tab--selected.react-tabs__tab  {
-        // font-size: 2rem;
-    }
-}
 
 @media(min-width: 950px) {
     .react-tabs__tab,
     .react-tabs__tab--selected.react-tabs__tab  {
-        font-size: 3rem;
+        font-size: 2.25rem;
     }
 }
 
 @media(min-width: 1300px) {
     .react-tabs__tab,
     .react-tabs__tab--selected.react-tabs__tab  {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
