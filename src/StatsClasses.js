@@ -8,7 +8,6 @@ import StatsExpandedClasses from './StatsExpandedClasses'
 const StatClasses = (props) => {
 
     //mapping to easily switch caret icon direction and accessible label description for expand/hide
-    
 
     return(
         <Fragment>
