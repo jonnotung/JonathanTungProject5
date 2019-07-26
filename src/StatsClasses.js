@@ -8,7 +8,6 @@ import StatsExpandedClasses from './StatsExpandedClasses'
 const StatClasses = (props) => {
 
     //mapping to easily switch caret icon direction and accessible label description for expand/hide
-    
 
     return(
         <Fragment>
@@ -25,7 +24,7 @@ const StatClasses = (props) => {
                         openClosedMap.caret="up";
                     }
                     return(
-                        <Fragment>
+                        <Fragment key={key}>
                             <li key={key} index={key}>
                                 <button  onClick={() => props.handleClick(key)}>
                                     {key}

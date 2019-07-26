@@ -1,13 +1,15 @@
 import React, {Fragment} from 'react';
 import StatsExpandedEnrolled from './StatsExpandedEnrolled.js';
 
+import {getClassConflicts, colorGraph, getSimultaneousGroups} from './scheduler'
+
 // ------------------------------------------------------------------
 // ---------component for student list tab in stats section----------
 // ------------------------------------------------------------------
 
 const StatsEnrolled = (props) => {
 
-    
+    // console.log(getClassConflicts( props.entries))
 
     return(
         <ul className="expandedList">
