@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { CSSTransition } from "react-transition-group";
 import StatsEnrolled from "./StatsEnrolled.js";
 import StatsClasses from "./StatsClasses.js";
+import StatsSchedule from './StatsSchedule.js';
 import firebase from "./firebase.js";
 
 // ------------------------------------------------------------------
@@ -119,6 +120,7 @@ class Stats extends Component {
                     <TabList>
                         <Tab>Students</Tab>
                         <Tab>Classes</Tab>
+                        <Tab>Exam Schedule</Tab>
                     </TabList>
 
                     <TabPanel>
@@ -147,6 +149,19 @@ class Stats extends Component {
                                 classStudents={this.state.classStudents}
                                 handleClick={this.handleClick}
                                 openEntries={this.state.openEntries}
+                            />
+                        </CSSTransition>
+                    </TabPanel>
+
+                    <TabPanel>
+                        <CSSTransition
+                            in={true}
+                            appear={true}
+                            timeout={900}
+                            classNames="fade"
+                        >
+                            <StatsSchedule 
+                                entries={this.state.entries}
                             />
                         </CSSTransition>
                     </TabPanel>

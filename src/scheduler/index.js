@@ -1,5 +1,3 @@
-
-
 export const getClassConflicts = (entries) => {
     const conflictGraph = {}
 
@@ -12,17 +10,17 @@ export const getClassConflicts = (entries) => {
                 const otherNotSeenYet = typeof conflictGraph[otherClass] === 'undefined'
                 
                 if(currentNotSeenYet) {
-                    conflictGraph[currentClass] =[]
+                    conflictGraph[currentClass] = {conflicts: []}
                 }
                 if(otherNotSeenYet) {
-                    conflictGraph[otherClass] =[]
+                    conflictGraph[otherClass] = { conflicts: [] }
                 }
 
-                if(!conflictGraph[currentClass].includes(otherClass)) {
-                    conflictGraph[currentClass].push(otherClass)
+                if(!conflictGraph[currentClass].conflicts.includes(otherClass)) {
+                    conflictGraph[currentClass].conflicts.push(otherClass)
                 }
-                if(!conflictGraph[otherClass].includes(currentClass)) {
-                    conflictGraph[otherClass].push(currentClass)
+                if(!conflictGraph[otherClass].conflicts.includes(currentClass)) {
+                    conflictGraph[otherClass].conflicts.push(currentClass)
                 }
                 
             }
@@ -31,3 +29,48 @@ export const getClassConflicts = (entries) => {
     return conflictGraph
 }
 
+const findMaxDegree = (conflictGraph) => {
+    let maxDegree = 0
+    for(let node in conflictGraph) {
+        if(conflictGraph[node].conflicts.length > maxDegree) {
+            maxDegree = conflictGraph[node].conflicts.length
+        }
+    }
+    return maxDegree
+}
+
+export const colorGraph = (conflictGraph) => {
+    const maxSimulGroups = findMaxDegree(conflictGraph) + 1
+    for(let node in conflictGraph) {
+        const illegalGroups = new Set()
+        conflictGraph[node].conflicts.forEach( (neighbour) => {
+            
+            if(conflictGraph[neighbour].group) {
+                illegalGroups.add(conflictGraph[neighbour].group)
+            }
+        })
+
+        for(let i = 1; i <= maxSimulGroups; i++) {
+            if(!illegalGroups.has(i)) {
+                conflictGraph[node].group = i 
+                break
+            }
+        }
+    }
+    return conflictGraph
+}
+
+
+
+export const getSimultaneousGroups = (conflictGraph) => {
+    const groups = {}
+
+    for (const node in conflictGraph) {
+        const currentGroup = conflictGraph[node].group
+        if(!groups[currentGroup]) {
+            groups[currentGroup] = new Set()
+        }
+        groups[currentGroup].add(node)
+    }
+    return groups
+}

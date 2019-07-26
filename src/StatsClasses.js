@@ -24,7 +24,7 @@ const StatClasses = (props) => {
                         openClosedMap.caret="up";
                     }
                     return(
-                        <Fragment>
+                        <Fragment key={key}>
                             <li key={key} index={key}>
                                 <button  onClick={() => props.handleClick(key)}>
                                     {key}

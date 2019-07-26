@@ -717,6 +717,18 @@ button.enrolledListButton {
   border-bottom: 2px solid #F1FFFA;
 }
 
+.scheduleWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.scheduleSlot {
+  width: 33%;
+  text-align: center;
+}
+
 @media (min-width: 600px) {
   .stats i {
     margin-left: 10px;
